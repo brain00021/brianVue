@@ -1,0 +1,56 @@
+@mixin size($width,$height) {
+  width:$width;
+  height:$height;
+}
+
+@mixin pie-clearfix() {
+  &:before,
+  &:after {
+    content: " ";
+    display: table;
+  }
+  &:after {
+    clear: both;
+  }
+  *zoom:1;
+}
+
+@mixin device_max-768 {
+  @media only screen and (max-width:768px),
+  only screen and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1),
+  only screen and (min-device-width: 1280px) and (max-device-width: 1280px) and (orientation: landscape) and (-webkit-max-device-pixel-ratio: 1.5) and (min-resolution: 192dpi),
+  only screen and (min-device-width: 1366px) and (max-device-width: 1366px) and (orientation: landscape) and (-webkit-max-device-pixel-ratio: 2),
+  only screen and (min-device-width: 1440px) and (max-device-width: 1440px) and (orientation: landscape) and (-webkit-max-device-pixel-ratio: 1.5) 
+    {
+      @content;
+    }
+}
+
+// 圓形設定
+@mixin circle($size, $bgcolor) {
+  width: $size;
+  height: $size;
+  border-radius: 50%;
+  background: $bgcolor;
+}
+// 手機、網頁class切換
+.web_view {
+  display: block;
+}
+
+.mob_view {
+  display: none;
+}
+
+@media only screen and (max-width:768px),
+only screen and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1),
+only screen and (min-device-width: 1280px) and (max-device-width: 1280px) and (orientation: landscape) and (-webkit-max-device-pixel-ratio: 1.5) and (min-resolution: 192dpi),
+only screen and (min-device-width: 1366px) and (max-device-width: 1366px) and (orientation: landscape) and (-webkit-max-device-pixel-ratio: 2),
+only screen and (min-device-width: 1440px) and (max-device-width: 1440px) and (orientation: landscape) and (-webkit-max-device-pixel-ratio: 1.5) {
+  .web_view {
+    display: none;
+  }
+  .mob_view {
+    display: block;
+  }
+}

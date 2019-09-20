@@ -1,0 +1,285 @@
+@import 'mixin.scss';
+body{
+  background:#F5F5F5
+}
+ #logo{
+  @include size(40px,auto);
+  
+  margin:8px auto;
+  left:-50px;
+  right:0;
+  @include device_max-768 {
+    position:absolute;
+  }
+  img{
+    filter: invert(1);
+    width:100%;
+  }
+}
+// 漢堡選單
+#toggle {
+  width: 40px;
+  height: 30px;
+  margin: 10px auto;
+  @include device_max-768 {
+    float:left;
+    // margin-top:-30px;
+  }
+  span {
+    width: 100%;
+    height: 5px;
+    display: block;
+    background: #1f1f1f;
+    margin: 4px auto;
+    transition: all 0.3s;
+    backface-visibility: hidden;
+  }
+  &.on span:first-child {
+    transform: rotate(45deg) translate(5px, 5px);
+  }
+  &.on span:nth-child(2) {
+    opacity: 0;
+  }
+  &.on span:last-child {
+    transform: rotate(-45deg) translate(7px, -8px);
+  }
+}
+// 主選單
+#nav{
+  position: fixed;
+  width:auto;
+  height:100%;
+  // background:#fff;
+  padding: 15px;
+  text-align: center;
+  z-index: 51;
+  // box-shadow: 0 0  2px rgba(#000,.2);
+  // border-right:1px solid rgba(#000,.2);
+  top:0;
+  transition: all .5s ease;
+  @include pie-clearfix;
+  @include device_max-768 {
+    width:100%;
+    height:50px;
+    background:#fff;
+    padding:5px;
+  }
+  &.navOpen{
+    background: transparent;
+    #toggle span {
+      background:#fff;
+    }
+    ul.friendlink li .icon {
+      background: white;
+      border-color: white;
+      color: black;
+      fill: black;
+    }
+    #logo img{
+      filter: none;
+    }
+  }
+  a {
+    font-weight: bold;
+    color: #2c3e50;
+    display: block;
+    text-align: center;
+    &.router-link-exact-active {
+      color: #42b983;
+    }
+  }
+  ul.friendlink{
+    position: absolute;
+    bottom:30px;
+    @include device_max-768 {
+      position: relative;
+      float: right;
+      margin-right:15px;
+      // margin-top:-40px;
+      @include pie-clearfix;
+      li{
+        float: left;
+        margin:5px;
+        &:first-child{
+          margin-left:0;
+        }
+      }
+    }
+    li{
+      @include size(35px,35px);
+      text-align: center;
+      margin:10px auto;
+      @include device_max-768 {
+        float: left;
+        margin:5px;
+      }
+      .icon {
+        background: black;
+        border-radius: 100%;
+        border:1px solid black;
+        color: white;
+        fill: white;
+        &:hover {
+          background: white;
+          color: black;
+          fill: black;
+        }
+        
+        &.facebook:hover {
+          color: #3B579D;
+          fill: #3B579D;
+        }
+        
+        &.github:hover {
+          background: #6441a5;
+          color: white;
+          fill: white;
+        }
+        
+        &.linkedin:hover {
+          color: #007BB6;
+          fill: #007BB6;
+        }
+      }
+
+      a{
+        display: block;
+        @include size(100%,100%);
+        transition: all 0.5s ease;
+      }
+    }
+  }
+}
+#app {
+  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: #2c3e50;
+}
+
+.content-wrapper{
+  position: relative;
+  margin-left:74px;
+  @include device_max-768{
+    margin:auto;
+    padding:0px;
+  }
+}
+
+
+// 選單內容
+#menu{
+  @include size(0%,100%);
+  position: fixed;
+  top:0;
+  left:0;
+  z-index: 50;
+  background: linear-gradient(130deg, #ffe300, #ff5c00, #00a3ff, #db36a4);
+  background-size: 800% 800%;
+  transition:all 1s ease;
+  animation: bg-gradient 19s ease infinite;
+  @keyframes bg-gradient { 
+      0%{
+        background-position:10% 0%;
+      }
+      50%{
+        background-position:91% 100%;
+      }
+      100%{
+        background-position:10% 0%;
+      }
+  }
+  &.open{
+    width:100%;
+    opacity: 1;
+  }
+  &.close{
+    width:0%;
+    opacity: 0;
+  }
+  #border-circle{
+    @include size(50%,auto);
+    position: relative;
+    margin:auto;
+    top:50%;
+    transform: translateY(-50%);
+    @include device_max-768{
+      width: 90%;
+    }
+    &::after{
+      content: "";
+      display: block;
+      width: 100%;
+      height:0;
+      padding-bottom: 90%; 
+      border-radius: 50%;
+      margin:auto;
+      transition: all 0.5s ease;
+      // background: rgba(#fff,.5);
+      border:1px solid #fff;
+      animation: AnimationName 5s ease infinite;
+      @keyframes AnimationName { 
+          0%{
+            border-radius:50%;
+            padding-bottom: 90%; 
+          }
+          10%{
+            border-radius:48% 45% 47% 50%;
+          }
+          50%{
+            border-radius:50% 46% 50% 46%;
+            padding-bottom: 88%; 
+          }
+          80%{
+            border-radius:46% 46% 48% 46%;
+          }
+          100%{
+            border-radius:50%;
+            padding-bottom: 90%; 
+          }
+      }
+    }
+
+    #menu-wrapper{
+      float:left;
+      width:100%;
+      padding-top:30%;
+      // line-height:1em;
+      margin-top:-0.5em;
+      text-align:center;
+      color:white;
+      a{
+        display: block;
+        text-align: center;
+        padding:10px;
+        color:#fff;
+        font-size:40pt;
+        font-weight: 300;
+        text-shadow:  0 1px 1px rgba(black,.5);
+        letter-spacing: 4px;
+        transition:all 0.5s ease;
+        transform: rotate(-15deg);
+        &:after{
+          content:'';
+          display: block;
+          width:0%;
+          margin:auto;
+          border-bottom:1px solid #fff;
+          transition:all 0.5s ease;
+        }
+        &:hover{
+          color:#fff;
+          letter-spacing: 15px;
+          text-decoration: none;
+          text-shadow:none;
+          &:after{
+            width:80%;
+          }
+          
+        }
+      }
+    }
+   
+  }
+}
