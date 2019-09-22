@@ -1,7 +1,7 @@
 //基本樣式設定
-@import 'reset.scss';
-@import 'mixin.scss';
+@import 'reset';
+@import 'mixin'; // 套件
 //其他頁面
-@import 'travel.scss'; // 旅遊網站
-@import 'layout.scss'; // header設定
-@import 'index.scss'; // index設定
+@import 'travel'; // 旅遊網站
+@import 'layout'; // header設定
+@import 'index'; // index設定

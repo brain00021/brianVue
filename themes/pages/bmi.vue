@@ -11,9 +11,9 @@
           span Weight / kg
           input(v-model="weightNumber")
       .input-check
-        .button(@click="checkWeight()") result
+        .button(@click="checkWeight()") Result
     .bmi-content
-      h1 BMI 紀錄
+      h1 BMI History
       hr
       .weightcard(v-for="item in todolistArry" ,:class="[{'red':item.BMI > 40},{'green':item.BMI<30},{'blue':item.BMI<16}]")
         .title
@@ -132,6 +132,7 @@ border-left:5px solid #86D73F;
     color:#FFD366 ;
     display: flex;
     justify-content:center;
+    align-items:center;
     padding:30px;
     .logo{
       margin:15px;
@@ -160,6 +161,7 @@ border-left:5px solid #86D73F;
   }
   .input-wrapper{
     width: 33%;
+    margin-right:20px;
     text-align: center;
     span{
       display:block;
@@ -181,8 +183,8 @@ border-left:5px solid #86D73F;
     margin:15px;
   }
   .button{
-    width:100px;
-    height:100px;
+    width:80px;
+    height:80px;
     border-radius: 50%;
     background: #FFD366;
     font-size: 20px;

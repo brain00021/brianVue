@@ -42,12 +42,13 @@ $sublineAlpha: .5;
   width:300px;
   background:#eee;
   box-shadow: 0 0 10px rgba(#000,.5);
-  float: left;
   min-height:100%;
   @media screen and (max-width: 760px) {
     width:100%;
     z-index: 10;
     min-height: unset;
+    top:60px;
+    padding:10px 0;
     .button{
       display: inline-block;
       margin-left:15px;
@@ -60,12 +61,14 @@ $sublineAlpha: .5;
 .container-rightside{
   width:100%;
   float: right;
-  margin-left:300px;
+  margin-left:330px;
   vertical-align: top;
   text-align: center;
+  margin-bottom:40px;
   @media only screen and (max-width: 760px) {
     margin-left:0;
     margin-top:230px;
+
   }
   .titleicon {
     background: #e8e8e8;
@@ -106,4 +109,7 @@ $sublineAlpha: .5;
 }
 .item-content{
   text-align:left;
+  @media screen and (max-width:768px){
+    text-align:center;
+  }
 }

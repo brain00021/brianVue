@@ -15,7 +15,6 @@ const actions = {
   updateLoading(context, status) {
     console.log(context);
     context.commit('LOADING', status);
-    
   },
   // menu開關
   switchMenu({commit}) {

@@ -24,8 +24,13 @@ div
   #menu(:class="{'open':isOpen , 'close':!isOpen}")
     #border-circle
       #menu-wrapper
-        router-link(to='/travel' @click.native='closeNav' ) Travel
-        router-link(to='/bmi' @click.native='closeNav') BMI
+        ul
+          li(@click="switchMenu")
+            nuxt-link(to='/travel' @click.native='closeNav' ) Travel
+          li(@click="switchMenu")
+            nuxt-link(to='/bmi' @click.native='closeNav') BMI
+          li(@click="switchMenu")
+            nuxt-link(to='/about' @click.native='closeNav') ABOUT
 </template>
 <script>
 import { mapState, mapGetters, mapActions } from 'vuex';

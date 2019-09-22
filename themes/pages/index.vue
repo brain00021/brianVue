@@ -1,4 +1,13 @@
 <template lang="pug">
+div
+  button.el-button(type="text" @click="openDialog('login')" style="z-index:150; position:relative;") 確定是ｌｏｇｉｎ
+  button.el-button(type="text" @click="openDialog('profile2')" style="z-index:150; position:relative;") 確定是profile2
+  el-dialog(title='提示', :visible.sync='dialogVisible', width='30%', :before-close='handleClose')
+    span 这是一段信息
+    component(:is="componentName", ref="dialogComponent")
+    span.dialog-footer(slot='footer')
+      el-button(@click='dialogVisible = false') 取 消
+      el-button(type='primary', @click='dialogVisible = false') 确 定
   .index-wrapper
     el-row
       el-col.banner(:sm='24' :md="10")
@@ -13,7 +22,7 @@
       el-col(:sm='24' :md="16")
         ul.profile-article
           li(v-for="item in profile")
-            a
+            a(@click="openDialog(item.name)")
               span.title {{ item.title }}
               img(:src="require(`@assets/${item.img}`)")
 
@@ -21,12 +30,19 @@
 <script>
 import $axios from 'axios';
 const dataUrl = require('@assets/data/profile.json');
+import dialogComponents from '@themes/components/dialog/index';
+
 export default {
+  components: {
+    ...dialogComponents,
+  },
   data () {
     return {
       profile:[],
       baseUrl: process.env.VUE_APP_BASE_URL,
       dataSwtich:true,
+      componentName: 'login',
+      dialogVisible: false
     }
   },
   mounted () {
@@ -45,6 +61,22 @@ export default {
         alert('目前沒有提供任何資料');
       }
     },
+    openDialog(data){
+      debugger;
+      this.dialogVisible = true;
+      this.componentName = data;
+    },
+    profileDialog(data){
+      debugger;
+      this.$emit('openDialog', data);
+    },
+    handleClose(done) {
+      this.$confirm('确认关闭？')
+        .then(_ => {
+          done();
+        })
+        .catch(_ => {});
+    }
   }
 }
 </script>

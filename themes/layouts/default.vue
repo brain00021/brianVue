@@ -1,20 +1,21 @@
 <template lang="pug">
-  #app
-    Header
-    .content-wrapper
-      nuxt
+  div
+    //- publicDialog(:visible="modalVisible", :openEvent="modalOpen", :closeEvent="modalClose", :closedEvent="modalClosed" :class="{diaglogBg: modalVisible}")
+    #app
+      Header
+      .content-wrapper
+        nuxt
 </template>
-
-<style lang="scss">
-
-</style>
 
 <script>
 import Header from '@themes/components/header.vue'
+import publicDialog from '@themes/components/dialog/public';
+
 
 export default {
   components: {
-    Header
-  }
+    Header,
+    publicDialog,
+  },
 }
 </script>

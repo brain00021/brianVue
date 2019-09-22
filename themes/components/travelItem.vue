@@ -81,6 +81,10 @@ export default {
   overflow: hidden;
   display: inline-block;
   font-family: 'AppleSystemUIFont';
+  @media only screen and (max-width:768px){
+    width:100%;
+    text-align: center;
+  }
   .card-img {
     width:100%;
     max-height:150px;
