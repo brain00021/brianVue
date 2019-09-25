@@ -1,6 +1,6 @@
 <template lang="pug">
-  .header-popup.login-block
-    | test for login
+  .header-popup
+    iframe(src='https://element.eleme.cn/#/zh-CN/component/dialog')
 </template>
 
 <script>

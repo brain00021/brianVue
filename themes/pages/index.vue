@@ -1,30 +1,26 @@
 <template lang="pug">
 div
-  button.el-button(type="text" @click="openDialog('login')" style="z-index:150; position:relative;") 確定是ｌｏｇｉｎ
-  button.el-button(type="text" @click="openDialog('profile2')" style="z-index:150; position:relative;") 確定是profile2
-  el-dialog(title='提示', :visible.sync='dialogVisible', width='30%', :before-close='handleClose')
-    span 这是一段信息
+  el-dialog(:title='componentName', :visible.sync='dialogVisible', width='90%', top='1%')
     component(:is="componentName", ref="dialogComponent")
     span.dialog-footer(slot='footer')
       el-button(@click='dialogVisible = false') 取 消
       el-button(type='primary', @click='dialogVisible = false') 确 定
   .index-wrapper
-    el-row
-      el-col.banner(:sm='24' :md="10")
-        #index-banner
-          img(src="@assets/index-banner.png")
-        #index-banner-detail
-          h1 Brian Li Design
-          h4 I am 
-            b.change-title
-            b.splite |
-          h6 2013 - 2019
-      el-col(:sm='24' :md="16")
-        ul.profile-article
-          li(v-for="item in profile")
-            a(@click="openDialog(item.name)")
-              span.title {{ item.title }}
-              img(:src="require(`@assets/${item.img}`)")
+    .banner
+      #index-banner
+        img(src="@assets/index-banner.png")
+      #index-banner-detail
+        h1 Brian Li Design
+        h4 I am 
+          b.change-title
+          b.splite |
+        h6 2013 - 2019
+    .profile
+      ul.profile-article
+        li(v-for="item in profile")
+          a(@click="openDialog(item.name)")
+            span.title {{ item.title }}
+            img(:src="require(`@assets/${item.img}`)")
 
 </template>
 <script>
@@ -33,6 +29,7 @@ const dataUrl = require('@assets/data/profile.json');
 import dialogComponents from '@themes/components/dialog/index';
 
 export default {
+  name: "IndexPage",
   components: {
     ...dialogComponents,
   },
@@ -51,10 +48,10 @@ export default {
     })
   },
   methods:{
-    GetProfile: async function () {
+    GetProfile: function () {
       try{
-        let res = await $axios.get(dataUrl);
-        this.profile = res.config.url.events;
+        let res = dataUrl;
+        this.profile = res.events;
         this.dataSwtich = true;
       }
       catch(res) {
@@ -62,13 +59,8 @@ export default {
       }
     },
     openDialog(data){
-      debugger;
       this.dialogVisible = true;
       this.componentName = data;
-    },
-    profileDialog(data){
-      debugger;
-      this.$emit('openDialog', data);
     },
     handleClose(done) {
       this.$confirm('确认关闭？')
@@ -84,7 +76,7 @@ export default {
 .change-title::after{
   content:'';
   display: inline;
-  color: #000;
+  font-size:1.8rem;
   animation: write 10s linear infinite;
   animation-fill-mode: forwards;
 }

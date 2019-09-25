@@ -1,5 +1,5 @@
 <template lang="pug">
-div
+header
   #nav(:class="{'navOpen':isOpen}")
     #logo
       router-link(to='/')

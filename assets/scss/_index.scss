@@ -1,12 +1,30 @@
 // 首頁備註
-@import 'mixin.scss';
+@import 'mixin';
+.index-wrapper{
+display:flex;
+  @include device_max-768 {
+    display:block;
+  }
+}
+#index-banner{
+  position:relative;
+}
 #index-banner-detail {
-  padding:15px;
+  padding:10px;
   text-align: center;
+  line-height:50px;
+  h1,h4,h6{
+    margin:0;
+    font-size:1.5rem;
+  }
   h1{
     font-size:3.5rem;
     font-weight: bold;
     transition: all 0.5s ease;
+    padding-bottom:10px;
+  }
+  h4{
+    padding-bottom:15px;
   }
   @media screen and (max-width:1300px) {
     text-align: right;
@@ -27,18 +45,20 @@
 
 //banner廣告區塊
 .banner{
+width:35%;
 position: fixed;
 overflow: hidden;
-right: -60px;
-@media screen and (max-width:1300px) {
-  width:50%;
-  right:0;
-}
+right:0;
+  @media screen and (max-width:1300px) {
+    width:50%;
+    right:0;
+  }
   @include device_max-768 {
     position: relative;
     width:100%;
     margin-top:50px;
     right:0px;
+    overflow: visible;
     #index-banner{
       width:50%;
       position:absolute;
@@ -55,6 +75,12 @@ right: -60px;
   }
 }
 //profile作品集區塊
+.profile{
+  width:65%;
+  @include device_max-768 {
+    width:100%;
+  }
+}
 .profile-article{
   position: relative;
   text-align:left;
@@ -108,5 +134,18 @@ right: -60px;
       left:0;
       @include size(100%,100%);
     }
+  }
+}
+// lightbox style
+.el-dialog__body{
+  padding:15px 0;
+}
+.header-popup{
+  position:relative;
+  iframe {
+    @include size(100%,100%);
+    min-height:500px;
+    left:0;
+    border:none;
   }
 }

@@ -3,10 +3,9 @@ body{
   background:#F5F5F5
 }
  #logo{
-  @include size(40px,auto);
-  
-  margin:8px auto;
-  left:-50px;
+  @include size(40px,40px);
+  margin:2px auto;
+  left:0;
   right:0;
   @include device_max-768 {
     position:absolute;
@@ -20,7 +19,7 @@ body{
 #toggle {
   width: 40px;
   height: 30px;
-  margin: 10px auto;
+  margin: 5px auto 0;
   @include device_max-768 {
     float:left;
     // margin-top:-30px;
@@ -48,21 +47,29 @@ body{
 #nav{
   position: fixed;
   width:auto;
+  overflow:hidden;
   height:100%;
-  // background:#fff;
   padding: 15px;
   text-align: center;
-  z-index: 51;
+  z-index: 999;
+  transform:translateY(0);
   // box-shadow: 0 0  2px rgba(#000,.2);
   // border-right:1px solid rgba(#000,.2);
   top:0;
   transition: all .5s ease;
   @include pie-clearfix;
   @include device_max-768 {
-    width:100%;
     height:50px;
     background:#fff;
     padding:5px;
+    left:0;
+    right:0;
+  }
+  //reset
+  ul,li{
+    margin:0;
+    padding:0;
+    list-style:none;
   }
   &.navOpen{
     background: transparent;
@@ -95,8 +102,7 @@ body{
       position: relative;
       bottom:0;
       float: right;
-      margin-right:15px;
-      // margin-top:-40px;
+      right:25px;
       @include pie-clearfix;
       li{
         float: left;
@@ -161,9 +167,11 @@ body{
 
 .content-wrapper{
   position: relative;
+  overflow:hidden;
   margin-left:74px;
   @include device_max-768{
     margin:auto;
+    margin-top:50px;
     padding:0px;
   }
 }
@@ -176,10 +184,17 @@ body{
   top:0;
   left:0;
   z-index: 50;
+  overflow:hidden;
   background: linear-gradient(130deg, #ffe300, #ff5c00, #00a3ff, #db36a4);
   background-size: 800% 800%;
   transition:all 1s ease;
   animation: bg-gradient 19s ease infinite;
+  //reset
+  ul,li{
+    margin:0;
+    padding:0;
+    list-style:none;
+  }
   @keyframes bg-gradient { 
       0%{
         background-position:10% 0%;
@@ -206,6 +221,8 @@ body{
     top:50%;
     transform: translateY(-50%);
     @include device_max-768{
+      transform: none;
+      top:30%;
       width: 90%;
     }
     &::after,&::before{
@@ -226,6 +243,9 @@ body{
       // background: rgba(#fff,.5);
       border:1px solid #fff;
       animation: AnimationName 5s ease infinite;
+      @include device_max-768{
+        border:2px solid rgba(#fff,2);
+      }
     }
     &::after{
       animation-delay:2s;
@@ -261,6 +281,9 @@ body{
         animation: AnimationName 4s ease infinite;
         // animation-delay:500s;
         // animation-direction:reverse;
+        @include device_max-768{
+          border:1px solid rgba(#fff,2);
+        }
       }
       &::after{
         animation-delay:2s;
@@ -274,7 +297,6 @@ body{
         font-weight: bold;
         letter-spacing: 4px;
         transition:all 0.5s ease;
-        // transform: rotate(-15deg);
         text-decoration:none;
         &:after,&:before{
           content:'';
