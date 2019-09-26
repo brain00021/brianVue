@@ -32,7 +32,7 @@ display:flex;
       font-size:2rem;
     }
   }
-  @media screen and (max-width:640px){
+  @include device_max-768 {
     text-align:left;
     h1 {
       font-size:1.8rem;
@@ -56,7 +56,6 @@ right:0;
   @include device_max-768 {
     position: relative;
     width:100%;
-    margin-top:50px;
     right:0px;
     overflow: visible;
     #index-banner{
@@ -147,5 +146,29 @@ right:0;
     min-height:500px;
     left:0;
     border:none;
+  }
+  // password styles
+  .passwordfield {
+    display:flex;
+    max-width:500px;
+    margin:auto;
+  }
+  .el-alert {
+    max-width: 500px;
+    margin:10px auto;
+  }
+  .article{
+    text-align:left;
+    padding:15px;
+    img{max-width:100%;}
+    b{
+      line-height:30px;
+      padding:0 15px;
+      color:#fff;
+      background:#820000;
+      border-radius:10px;
+      margin:10px auto;
+      display:inline;
+    }
   }
 }

@@ -1,24 +1,24 @@
 <template lang="pug">
 div
-  el-dialog(:title='componentName', :visible.sync='dialogVisible', width='90%', top='1%')
+  el-dialog(:title='dialogTitle', :visible.sync='dialogVisible', width='90%', top='1%')
     component(:is="componentName", ref="dialogComponent")
     span.dialog-footer(slot='footer')
-      el-button(@click='dialogVisible = false') 取 消
-      el-button(type='primary', @click='dialogVisible = false') 确 定
+      el-button(@click='dialogVisible = false') Cancel
+      el-button(type='primary', @click='dialogVisible = false') OK
   .index-wrapper
     .banner
       #index-banner
         img(src="@assets/index-banner.png")
       #index-banner-detail
         h1 Brian Li Design
-        h4 I am 
+        h4 I am a 
           b.change-title
           b.splite |
         h6 2013 - 2019
     .profile
       ul.profile-article
         li(v-for="item in profile")
-          a(@click="openDialog(item.name)")
+          a(@click="openDialog(item.name,item.title)")
             span.title {{ item.title }}
             img(:src="require(`@assets/${item.img}`)")
 
@@ -39,7 +39,8 @@ export default {
       baseUrl: process.env.VUE_APP_BASE_URL,
       dataSwtich:true,
       componentName: 'login',
-      dialogVisible: false
+      dialogVisible: false,
+      dialogTitle: 'default title',
     }
   },
   mounted () {
@@ -58,9 +59,10 @@ export default {
         alert('目前沒有提供任何資料');
       }
     },
-    openDialog(data){
+    openDialog(name,title){
       this.dialogVisible = true;
-      this.componentName = data;
+      this.componentName = name;
+      this.dialogTitle = title;
     },
     handleClose(done) {
       this.$confirm('确认关闭？')

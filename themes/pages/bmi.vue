@@ -15,7 +15,7 @@
     .bmi-content
       h1 BMI History
       hr
-      .weightcard(v-for="item in todolistArry" ,:class="[{'red':item.BMI > 40},{'green':item.BMI<30},{'blue':item.BMI<16}]")
+      .weightcard(v-for="item in todolistArry" ,:class="[{'red':item.BMI > 40},{'green':item.BMI<40},{'blue':item.BMI<16}]")
         .title
           | {{item.Title}}
         .content
@@ -72,21 +72,21 @@ export default {
     },
     getTitle: function () {
       if (this.bmiresult <= 15) {
-        this.bmicurrenttitle = '非常嚴重體重不足'
+        this.bmicurrenttitle = 'Too Skinny'
       } else if (this.bmiresult <= 16) {
-        this.bmicurrenttitle = '嚴重體重不足'
+        this.bmicurrenttitle = 'Skinny'
       } else if (this.bmiresult <= 18.5) {
-        this.bmicurrenttitle = '體重過輕'
+        this.bmicurrenttitle = 'Thin'
       } else if (this.bmiresult <= 25) {
-        this.bmicurrenttitle = '正常體重'
+        this.bmicurrenttitle = 'Normal'
       } else if (this.bmiresult <= 30) {
-        this.bmicurrenttitle = '體重過重'
+        this.bmicurrenttitle = 'OverWeight'
       } else if (this.bmiresult <= 35) {
-        this.bmicurrenttitle = '中等肥胖'
+        this.bmicurrenttitle = 'MidWeight'
       } else if (this.bmiresult <= 40) {
-        this.bmicurrenttitle = '嚴重肥胖'
+        this.bmicurrenttitle = 'Obese'
       } else {
-        this.bmicurrenttitle = '你真的超胖'
+        this.bmicurrenttitle = 'Too Fat'
       }
     }
   }
@@ -189,7 +189,7 @@ border-left:5px solid #86D73F;
     background: #FFD366;
     font-size: 20px;
     font-weight: bold;
-    line-height:80px;
+    line-height:60px;
     color:#424242;
     &:hover{
       box-shadow:  0 0 10px #FFD366;

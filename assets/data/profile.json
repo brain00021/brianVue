@@ -1,6 +1,46 @@
 {
   "events":[
     {
+      "url" : "events/OCMS/gamebling/index/index.jpg",
+      "date" : "2018/11",
+      "img" : "events/OCMS/gamebling/index/index-tumb.jpg",
+      "title" : "GAMA @ STYLE 15",
+      "type": "image",
+      "name": "GamaStyle15"
+    },
+    {
+      "url" : "events/OCMS/gamebling/index/index-v2-tumb.jpg",
+      "date" : "2018/8",
+      "img" : "events/OCMS/gamebling/index/index-v2-tumb.jpg",
+      "title" : "GAMA @ STYLE 02",
+      "type": "image",
+      "name": "GamaStyle02"
+    },
+    {
+      "url" : "events/OCMS/gamebling/index/index-fisher-tumb.jpg",
+      "date" : "2018/8",
+      "img" : "events/OCMS/gamebling/index/index-fisher-tumb.jpg",
+      "title" : "GAMA @ STYLE 11",
+      "type": "image",
+      "name": "GamaStyle11"
+    },
+    {
+      "url" : "events/OCMS/gamebling/index/index-tgi-tumb.jpg",
+      "date" : "2018/8",
+      "img" : "events/OCMS/gamebling/index/index-tgi-tumb.jpg",
+      "title" : "GAMA @ STYLE 13",
+      "type": "image",
+      "name": "GamaStyle13"
+    },
+    {
+      "url" : "events/alchcoin/alchcoin-tumb.jpg",
+      "date" : "2017/5",
+      "img" : "events/alchcoin/alchcoin-tumb.jpg",
+      "title" : " Alchemycoin @ bitcoin ",
+      "type": "image",
+      "name": "Alchemycoin"
+    },
+    {
       "url" : "https://medium.com/@brianli_42376/%E5%A6%96%E6%80%AA%E6%9D%91%E5%A4%A7%E6%A8%82%E9%80%8F-%E8%A3%BD%E4%BD%9C%E6%B5%81%E7%A8%8B-107b3400c3f8#.7usztpm6c",
       "date" : "2015/08",
       "img" : "events/lettory.jpg",
@@ -25,102 +65,76 @@
       "name": "Ecommerceshop"
     },
     {
-      "url" : "events/OCMS/gamebling/index/index.jpg",
-      "date" : "2018/11",
-      "img" : "events/OCMS/gamebling/index/index-tumb.jpg",
-      "title" : "GAMA @ STYLE 15",
-      "type": "image"
-    },
-    {
-      "url" : "events/OCMS/gamebling/index/index-v2-tumb.jpg",
-      "date" : "2018/8",
-      "img" : "events/OCMS/gamebling/index/index-v2-tumb.jpg",
-      "title" : "GAMA @ STYLE 03",
-      "type": "image"
-    },
-    {
-      "url" : "events/OCMS/gamebling/index/index-fisher-tumb.jpg",
-      "date" : "2018/8",
-      "img" : "events/OCMS/gamebling/index/index-fisher-tumb.jpg",
-      "title" : "GAMA @ STYLE 11",
-      "type": "image"
-    },
-    {
-      "url" : "events/OCMS/gamebling/index/index-tgi-tumb.jpg",
-      "date" : "2018/8",
-      "img" : "events/OCMS/gamebling/index/index-tgi-tumb.jpg",
-      "title" : "GAMA @ STYLE 13",
-      "type": "image"
-    },
-    {
-      "url" : "events/alchcoin.jpg",
-      "date" : "2017/5",
-      "img" : "events/alchcoin.jpg",
-      "title" : " alchemycoin ",
-      "type": "image"
-    },
-    {
       "url" : "events/sport/sport.jpg",
       "date" : "2015/11",
       "img" : "events/sport/sport-tumb.jpg",
-      "title" : "monster voute",
-      "type": "image"
+      "title" : "monster Sport",
+      "type": "image",
+      "name": "Maintain"
     },
     {
       "url" : "events/vote/phone.jpg",
       "date" : "2015/9",
       "img" : "events/vote/vote-tumbs.jpg",
-      "title" : "monster voute",
-      "type": "image"
+      "title" : "monster vote",
+      "type": "image",
+      "name": "Maintain"
     },
     {
       "url" : "events/mosiamask/all_mask.jpg",
       "date" : "2015/5",
       "img" : "events/mosiamask/index.jpg",
       "title" : "monsia commercial",
-      "type": "image"
+      "type": "image",
+      "name": "Maintain"
     },
     {
       "url" : "events/monsia/image4.jpg",
       "date" : "2015/4",
       "img" : "events/monsia/image4.jpg",
       "title" : "monsia",
-      "type": "image"
+      "type": "image",
+      "name": "Maintain"
     },
     {
       "url" : "events/lala/image6.jpg",
       "date" : "2014/4",
       "img" : "events/lala/image6.jpg",
       "title" : "lala comercial",
-      "type": "image"
+      "type": "image",
+      "name": "Maintain"
     },
     {
       "url" : "events/aika/image2.jpg",
       "date" : "2013/4",
       "img" : "events/aika/image2-thumb.jpg",
       "title" : "aika commercial",
-      "type": "image"
+      "type": "image",
+      "name": "Maintain"
     },
     {
       "url" : "events/angel/image1.jpg",
       "date" : "2014/5",
       "img" : "events/angel/image1-thumb.jpg",
       "title" : "angel office website",
-      "type": "image"
+      "type": "image",
+      "name": "Maintain"
     },
     {
       "url" : "events/gulo/image7.jpg",
       "date" : "2014/4",
       "img" : "events/gulo/image7.jpg",
       "title" : "gulo office website",
-      "type": "image"
+      "type": "image",
+      "name": "Maintain"
     },
     {
       "url" : "events/lala/image5.jpg",
       "date" : "2014/5",
       "img" : "events/lala/image5.jpg",
       "title" : "lala commercial",
-      "type": "image"
+      "type": "image",
+      "name": "Maintain"
     }
   ],
   "uxdesign":[
