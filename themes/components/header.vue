@@ -25,8 +25,10 @@ header
     #border-circle
       #menu-wrapper
         ul
+          span Profile
           li(@click="switchMenu")
             nuxt-link(to='/about' @click.native='closeNav') ABOUT
+          span Small Project
           li(@click="switchMenu")
             nuxt-link(to='/travel' @click.native='closeNav' ) Travel
           li(@click="switchMenu")

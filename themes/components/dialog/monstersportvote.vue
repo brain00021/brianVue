@@ -1,11 +1,12 @@
 <template lang="pug">
   .header-popup
     .article
-      h3 2018 Online gamebling website.
+      h3 2015 Monster Sport.
       h4 My responsibility in the project.
       ul
         li UI/UX Wireframe/MOCKUP.
         li Layout RWD WEBDESIGN FROM PSD To html.
+        li Cooperate Back End developer for API
       div(v-for="image in urls")
         b {{ image.title}}
         div
@@ -15,7 +16,7 @@
 <script>
 
 export default {
-  name: 'Alchemycoin',
+  name: 'MonsterSport',
   data(){
     return{
       article: false,
@@ -23,12 +24,12 @@ export default {
       alertmessage: false,
       urls:[
         {
-          title:'Alchcoin',
-          url: require('@assets/events/alchcoin/alchcoin.jpg')
+          title:' Monster Sport RWD visual',
+          url: require('@assets/events/sport/sport-rwd-design.jpg')
         },
         {
-          title:'Alchcoin Resposive Web Design',
-          url: require('@assets/events/alchcoin/alchoin2.jpg')
+          title:' Monster Sport full page',
+          url: require('@assets/events/sport/sport-rwd-design-02.jpg')
         },
       ]
     }

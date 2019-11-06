@@ -20,8 +20,8 @@ div
         li(v-for="item in profile")
           a(@click="openDialog(item.name,item.title)")
             span.title {{ item.title }}
-            img(:src="require(`@assets/${item.img}`)")
-
+            img(:src="item.type==='url'? item.img : require(`@assets/${item.img}`)")
+            img(:src="item.img" v-if="item.type == 'url'")
 </template>
 <script>
 import $axios from 'axios';
@@ -76,7 +76,7 @@ export default {
 </script>
 <style lang="scss" scoped>
 .change-title::after{
-  content:'';
+  content:'FrontEnd Developer';
   display: inline;
   font-size:1.8rem;
   animation: write 10s linear infinite;

@@ -2,10 +2,10 @@ const skin = `assets`;
 const path = require('path');
 
 const seo = {
-  title: 'OCMS',
+  title: 'Brian Li Resume',
   meta: [{
-    keywords: 'OCMS',
-    description: 'OCMS Website',
+    keywords: 'Profile , BrianLiProfile, ',
+    description: 'Brian Li Resume',
   }],
 };
 module.exports = {
@@ -14,7 +14,7 @@ module.exports = {
   ** Headers of the page
   */
   head: {
-    title: process.env.npm_package_name || '',
+    title: seo.title,
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },

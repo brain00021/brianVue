@@ -160,6 +160,7 @@ right:0;
   .article{
     text-align:left;
     padding:15px;
+    font-size:12pt;
     img{max-width:100%;}
     b{
       line-height:30px;
@@ -171,4 +172,12 @@ right:0;
       display:inline;
     }
   }
+}
+
+// tips styles
+.redtips{
+  color:rgb(150, 0, 0);
+  font-size:20px;
+  display:block;
+  margin:10px;
 }

@@ -41,6 +41,14 @@
       "name": "Alchemycoin"
     },
     {
+      "url" : "https://mir-s3-cdn-cf.behance.net/project_modules/fs/4e432987785435.5dc2b867cf5b8.jpg",
+      "date" : "2017/5",
+      "img" : "https://mir-s3-cdn-cf.behance.net/project_modules/fs/4e432987785435.5dc2b867cf5b8.jpg",
+      "title" : " clickNumLottery @ clickNum ",
+      "type": "url",
+      "name": "clickNumLottery"
+    },
+    {
       "url" : "https://medium.com/@brianli_42376/%E5%A6%96%E6%80%AA%E6%9D%91%E5%A4%A7%E6%A8%82%E9%80%8F-%E8%A3%BD%E4%BD%9C%E6%B5%81%E7%A8%8B-107b3400c3f8#.7usztpm6c",
       "date" : "2015/08",
       "img" : "events/lettory.jpg",
@@ -68,25 +76,25 @@
       "url" : "events/sport/sport.jpg",
       "date" : "2015/11",
       "img" : "events/sport/sport-tumb.jpg",
-      "title" : "monster Sport",
+      "title" : "monster Sport Festival",
       "type": "image",
-      "name": "Maintain"
+      "name": "monstersportvote"
     },
     {
       "url" : "events/vote/phone.jpg",
       "date" : "2015/9",
       "img" : "events/vote/vote-tumbs.jpg",
-      "title" : "monster vote",
+      "title" : "Monster Taiwan Polite Festival adverstments",
       "type": "image",
-      "name": "Maintain"
+      "name": "monsterpolitevote"
     },
     {
       "url" : "events/mosiamask/all_mask.jpg",
       "date" : "2015/5",
       "img" : "events/mosiamask/index.jpg",
-      "title" : "monsia commercial",
+      "title" : "Monster Mask Festival adverstments",
       "type": "image",
-      "name": "Maintain"
+      "name": "monstercustom"
     },
     {
       "url" : "events/monsia/image4.jpg",
