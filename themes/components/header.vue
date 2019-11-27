@@ -30,9 +30,11 @@ header
             nuxt-link(to='/about' @click.native='closeNav') ABOUT
           span Small Project
           li(@click="switchMenu")
-            nuxt-link(to='/travel' @click.native='closeNav' ) Travel
+            nuxt-link(to='/travel' @click.native='closeNav' ) Kaochung Travel
           li(@click="switchMenu")
             nuxt-link(to='/bmi' @click.native='closeNav') BMI
+          li(@click="switchMenu")
+            nuxt-link(to='/aqi' @click.native='closeNav') AQI
 
 </template>
 <script>

@@ -64,7 +64,7 @@ export default {
   },
   methods: {
     //  https://data.kcg.gov.tw/api/action/datastore_search?resource_id=92290ee5-6e61-456f-80c0-249eae2fcc97 高雄觀光局資料
-    async GetData () {
+    GetData () {
       $axios.get('https://data.kcg.gov.tw/api/action/datastore_search?resource_id=92290ee5-6e61-456f-80c0-249eae2fcc97')
         .then((response) => {
         /* 成功拿到資料，然後... */
@@ -76,7 +76,7 @@ export default {
           this.fliter(this.newItem)
         })
         .catch((response) => {
-          alert('目前沒有提供任何資料')
+          alert('No date')
         })
         .finally(() => {
           /* 不論成功失敗，都做些事 */

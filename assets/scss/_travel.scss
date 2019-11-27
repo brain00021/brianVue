@@ -6,7 +6,9 @@ $gridSize: 60px;
 $subdivisions: 4;
 $lineAlpha: .7;
 $sublineAlpha: .5;
-
+body{
+  font-family: Microsoft JhengHei,helvetica, arial, sans-serif;
+}
 .travel-index {
   display:flex;
   align-item:stretch;

@@ -2,6 +2,7 @@
   .aboutus-wrapper
     .resume
       .left
+        .decoration
         h1 Brian Li
         h4 Web developer / Web designer 
         hr
@@ -77,7 +78,6 @@
                 .value.p70
 
       .right
-        .decoration
         .block
           h4 My History
           h2 Experience / Works
@@ -90,11 +90,12 @@
                   h5 
                     b Front-end developer 
                 ol
-                  li Mocked up and designed gambling RWD and layout.
-                  li Utilized basic Vue command and VUEX experience.
-                  li Also worked extensively with AJAX and GIT.
-                  li MVVM
-                  li Basic webpack Nuxt.js
+                  li Strong Experience Vue 2.0 and Vuex. .
+                  li Partner with Back-end developers , experience and visual designers.
+                  li Developed CMS layout,template, modification & manipulation.
+                  li Proficiency with modern web design concepts such as responsive design and mobile first development, template design & build. 
+                  li Demonstrated development experience and mastery of interface design. 
+                  li Good understanding of the principles of web accessibility and user centered design.
             li.year
               | 2014
               ul
@@ -103,9 +104,10 @@
                   h5 
                     b Front-end designer 
                 ol
-                  li Mocked up and designed the layout of the guest’s booking website
-                  li Designed and mocked up the shopping experience for the guests
-                  li Used a variety of skills including Bootstrap, Ajax, JQuery and Wordpress.
+                  li Mockup the layout of the hotel booking website.
+                  li Developed activity website. (Lottery, Slot Machine, Online Shopping Website,etc..)
+                  li Partner with Back-end developers , experience and visual designers
+                  li Strong Experience for Boostrap, Ajax and Wordpress, SASS, Pug , jQuery.
             li.year
               | 2013
               ul
@@ -114,9 +116,10 @@
                   h5 
                     b Web designer 
                 ol
-                  li Developed HTML, CSS, &amp; JavaScript skills
-                  li Google analysis setting
-                  li Designed the website and commercials
+                  li Mockup and Layout online game website.
+                  li Demonstrated development experience and mastery of interface design.
+                  li Cross-browser compatibility experience for all major browser.
+                  li Worked on digital activities projects include HTML5/Flash banner and eDM.
 </template>
 <script>
 export default {

@@ -159,7 +159,7 @@ body{
   }
 }
 #app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  font-family: 'Avenir',Microsoft JhengHei, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
@@ -248,7 +248,8 @@ body{
       border:1px solid #fff;
       animation: AnimationName 5s ease infinite;
       @include device_max-768{
-        border:2px solid rgba(#fff,2);
+        // border:2px solid rgba(#fff,2);
+        display: none;
       }
     }
     &::after{
@@ -286,7 +287,7 @@ body{
         // animation-delay:500s;
         // animation-direction:reverse;
         @include device_max-768{
-          border:1px solid rgba(#fff,2);
+          display: none;
         }
       }
       &::after{
@@ -297,7 +298,7 @@ body{
         text-align: center;
         padding:10px;
         color:#fff;
-        font-size:40pt;
+        font-size: 18pt;
         font-weight: bold;
         letter-spacing: 4px;
         transition:all 0.5s ease;

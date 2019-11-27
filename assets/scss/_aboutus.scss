@@ -89,6 +89,7 @@
   
   .left {
     padding-right: 50px;
+    padding-top:200px;
     border-right: solid 1px #FF7168;
     @media only screen and (max-width: 768px){
       padding:15px;
@@ -98,7 +99,7 @@
   
   .right {
     padding-left: 50px;
-    padding-top: 150px;
+    // padding-top: 150px;
     @media only screen and (max-width: 768px){
       padding:15px;
     }
@@ -108,9 +109,9 @@
     width: 300px;
     height: 140px;
     background: linear-gradient(135deg, #FF5F5F, #FFFFAE);
-    border-radius: 70px 0px 0px 70px;
+    border-radius: 0px 70px 70px 0px;
     position: absolute;
-    right: 0;
+    left: 0;
     top: 50px;
     @media only screen and (max-width: 768px){
       display:none;
