@@ -85,6 +85,10 @@ right:0;
   text-align:left;
   padding:0 10px;
   z-index: 20;
+  padding-bottom:150px;
+  @media only screen and (max-width:769px) , only screen and (max-device-width:1024px){
+    padding-bottom:0;
+  }
   li{
     width:48%;
     height:auto;
@@ -95,6 +99,9 @@ right:0;
     &:nth-child(2n) {
       top:10vw;
       vertical-align: top;
+      @media only screen and (max-width:769px) , only screen and (max-device-width:1024px){
+        top:0;
+      }
     }
     @media screen and (max-width:640px) {
       width:100%;

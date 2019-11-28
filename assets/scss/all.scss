@@ -6,4 +6,7 @@
 @import 'layout'; // header設定
 @import 'aqi';     // air quality index 設定
 @import 'index'; // index設定
-@import 'aboutus' // 自介
+@import 'aboutus'; // 自介
+.nuxt-progress {
+    background:blue;
+}

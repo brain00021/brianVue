@@ -105,6 +105,9 @@ export default {
   vertical-align: center;
   margin:15px auto;
   text-align: center;
+  @media screen and (max-width:768px){
+    display:block;
+  }
   >div{
     line-height: 30px;
   }
@@ -134,6 +137,9 @@ border-left:5px solid #86D73F;
     justify-content:center;
     align-items:center;
     padding:30px;
+    @media only screen and (max-width: 768px){
+      padding:10px 0;
+    }
     .logo{
       margin:15px;
       margin-right: 50px;
