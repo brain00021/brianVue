@@ -6,7 +6,11 @@
       "img" : "events/OCMS/gamebling/index/index-tumb.jpg",
       "title" : "GAMA @ STYLE 15",
       "type": "image",
-      "name": "GamaStyle15"
+      "name": "GamaStyle15",
+      "link":{
+              "linkurl":"https://www.chanabet555.com",
+              "activate":true
+            }
     },
     {
       "url" : "events/OCMS/gamebling/index/index-v2-tumb.jpg",
@@ -14,7 +18,11 @@
       "img" : "events/OCMS/gamebling/index/index-v2-tumb.jpg",
       "title" : "GAMA @ STYLE 02",
       "type": "image",
-      "name": "GamaStyle02"
+      "name": "GamaStyle02",
+      "link":{
+        "linkurl":"https://www.virgin88.com/",
+        "activate":true
+      }
     },
     {
       "url" : "events/OCMS/gamebling/index/index-fisher-tumb.jpg",
@@ -22,7 +30,11 @@
       "img" : "events/OCMS/gamebling/index/index-fisher-tumb.jpg",
       "title" : "GAMA @ STYLE 11",
       "type": "image",
-      "name": "GamaStyle11"
+      "name": "GamaStyle11",
+      "link":{
+        "linkurl":"https://www.yingpla999.com/",
+        "activate":true
+      }
     },
     {
       "url" : "events/OCMS/gamebling/index/index-tgi-tumb.jpg",
@@ -30,7 +42,11 @@
       "img" : "events/OCMS/gamebling/index/index-tgi-tumb.jpg",
       "title" : "GAMA @ STYLE 13",
       "type": "image",
-      "name": "GamaStyle13"
+      "name": "GamaStyle13",
+      "link":{
+        "linkurl":"https://www.tigerii.com/",
+        "activate":true
+      }
     },
     {
       "url" : "events/alchcoin/alchcoin-tumb.jpg",

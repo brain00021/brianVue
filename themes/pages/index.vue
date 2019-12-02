@@ -3,8 +3,9 @@ div
   el-dialog(:title='dialogTitle', :visible.sync='dialogVisible', width='90%', top='1%')
     component(:is="componentName", ref="dialogComponent")
     span.dialog-footer(slot='footer')
-      el-button(@click='dialogVisible = false') Cancel
+      el-button(v-if="dialogUrl['activate'] == true" type='success' style='float:left' @click="linkUrl(dialogUrl['linkurl'])") Website Link
       el-button(type='primary', @click='dialogVisible = false') OK
+      el-button(@click='dialogVisible = false') Cancel
   .index-wrapper
     .banner
       #index-banner
@@ -18,13 +19,14 @@ div
     .profile
       ul.profile-article
         li(v-for="item in profile")
-          a(@click="openDialog(item.name,item.title)")
+          a(@click="openDialog(item.name,item.title,item.link)")
             span.title {{ item.title }}
             img(:src="item.type==='url'? item.img : require(`@assets/${item.img}`)")
             img(:src="item.img" v-if="item.type == 'url'")
 </template>
 <script>
 import $axios from 'axios';
+import {isUndefined} from 'lodash';
 const dataUrl = require('@assets/data/profile.json');
 import dialogComponents from '@themes/components/dialog/index';
 
@@ -41,6 +43,7 @@ export default {
       componentName: 'login',
       dialogVisible: false,
       dialogTitle: 'default title',
+      dialogUrl:{},
     }
   },
   mounted () {
@@ -59,10 +62,18 @@ export default {
         alert('目前沒有提供任何資料');
       }
     },
-    openDialog(name,title){
+    openDialog(name,title,link){
       this.dialogVisible = true;
       this.componentName = name;
       this.dialogTitle = title;
+      if(isUndefined(link)){
+        this.dialogUrl = { "linkurl":"javascript:void(0)", "activate":false}
+      }else{
+        this.dialogUrl = link 
+      };
+    },
+    linkUrl(val){
+      window.open(`${val}`, "_blank");
     },
     handleClose(done) {
       this.$confirm('确认关闭？')
@@ -75,6 +86,13 @@ export default {
 }
 </script>
 <style lang="scss" scoped>
+.el-dialog__body{
+  padding:0;
+}
+.el-dialog__header{
+  padding-bottom:0;
+}
+
 .change-title::after{
   content:'FrontEnd Developer';
   display: inline;
