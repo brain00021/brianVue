@@ -5,13 +5,13 @@
   box-sizing:border-box;
 }
 html {
-  font-family: sans-serif;
+  font-family: 'Noto Sans TC', sans-serif;
   text-size-adjust: 100%; 
 }
 
 body {
   margin: 0;
-  font-family: 'Noto Sans TC', sans-serif;
+  
 }
 
 // HTML5 display definitions
@@ -411,7 +411,7 @@ th {
   padding: 0;
 }
 h1,h2,h3,h4,h5,h6 {
-  font-family: inherit;
+  font-family: 'Noto Sans TC', sans-serif;
   font-weight: 500;
   line-height: 1.1;
   small {

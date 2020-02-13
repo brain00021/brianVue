@@ -14,6 +14,11 @@ const state = () => ({
     currentProfile:[],
     currentFliter:'',
     currentTitle:'',
+    contentNum: 6,
+    pageNum: 1,
+    totalPages: 0,
+    displayProfile:[],
+    profileButton:false,
   })
 
 const actions = {
@@ -29,6 +34,7 @@ const actions = {
   // fliter
   fliterProfile(context,status){
     context.commit('FLITERPROFILE',status)
+    context.commit('DISPLAYPROFILE')
   },
   // menu開關
   switchMenu({commit}) {
@@ -36,7 +42,14 @@ const actions = {
   },
   closeMenu({commit}) {
     commit('CLOSEMENU')
-  }
+  },
+  displayDistrice({commit}) {
+    commit('DISPLAYPROFILE')
+  },
+  profileMore({commit}){
+    commit('PROFILEMORE');
+    commit('DISPLAYPROFILE')
+  },
 }
 
 const mutations =  {
@@ -53,10 +66,12 @@ const mutations =  {
     state.originProfile = status;
   },
   FLITERPROFILE(state,payload){
-    debugger;
     state.currentFliter = (!isUndefined(payload)) ? payload.target.dataset.nav.split(" ").join("").toLowerCase() : 'allproject';
     state.currentTitle = (!isUndefined(payload)) ? payload.target.textContent : 'All Project' ;
     state.currentProfile = [];
+    if(state.pageNum > 1){
+      state.pageNum = 1;
+    }
     switch(state.currentFliter) {
       case 'worksproject':
         state.originProfile.map((data)=>{
@@ -75,12 +90,40 @@ const mutations =  {
       default:
         state.currentProfile = state.originProfile;
     }
+  },
+  DISPLAYPROFILE(state,payload) {
+    let start = state.pageNum * state.contentNum
+    let newListData = []
+    let dataLen = state.currentProfile.length
+
+    // 頁數
+    // this.calPageNumb(dataLen)
+    state.totalPages = dataLen
+
+    if (dataLen > start) {
+      dataLen = start
+      state.profileButton= true;
+    } else {
+      dataLen = state.currentProfile.length
+      state.profileButton= false;
+    }
+
+    for (let i = 0; i < dataLen; i++) {
+      newListData.push(state.currentProfile[i])
+    }
+
+    state.displayProfile = newListData
+  },
+  PROFILEMORE(state) {
+    state.pageNum++;
   }
 }
 
 const getters = {
   isLoading: state => state.isLoading,
   currentProfile: state => state.currentProfile,
+  displayProfile: state => state.displayProfile,
+  profileButton: state => state.profileButton,
 }
 
 export default {

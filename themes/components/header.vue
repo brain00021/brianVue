@@ -24,7 +24,7 @@ header
   #menu(:class="{'open':isOpen , 'close':!isOpen}")
     #border-circle
       #menu-wrapper
-        ul
+        ul.menu-main-wrapper
           li(@click="closeMenu")
             nuxt-link( to='/' @click.native='ChangeFliter' data-nav='allproject') All Project
           li(@click="closeMenu")
@@ -33,13 +33,15 @@ header
             nuxt-link( to='/' @click.native='ChangeFliter'  data-nav='Article') Article
           li
             nuxt-link(to='/about' @click.native='closeMenu') ABOUT
-          span Small Project
           li
-            nuxt-link(to='/travel' @click.native='closeMenu' ) Kaochung Travel
-          li
-            nuxt-link(to='/bmi' @click.native='closeMenu') BMI
-          li
-            nuxt-link(to='/aqi' @click.native='closeMenu') AQI
+            a Small Project
+              ul.menu-sub-wrapper
+                li
+                  nuxt-link(to='/travel' @click.native='closeMenu' ) Kaochung Travel
+                li
+                  nuxt-link(to='/bmi' @click.native='closeMenu') BMI
+                li
+                  nuxt-link(to='/aqi' @click.native='closeMenu') AQI
 
 </template>
 <script>

@@ -3,6 +3,8 @@
     Header
     .content-wrapper
       nuxt
+      .footer
+        span Brian Design ©copy right 2019
 </template>
 
 <script>

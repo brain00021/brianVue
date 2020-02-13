@@ -2,6 +2,7 @@
 @import 'mixin';
 .index-wrapper{
 display:flex;
+flex-direction:column;
   @include device_max-768 {
     display:block;
   }
@@ -11,7 +12,7 @@ display:flex;
 }
 #index-banner-detail {
   padding:10px;
-  text-align: center;
+  text-align: right;
   line-height:50px;
   h1,h4,h6{
     margin:0;
@@ -21,10 +22,10 @@ display:flex;
     font-size:3.5rem;
     font-weight: bold;
     transition: all 0.5s ease;
-    padding-bottom:10px;
+    padding-bottom:30px;
   }
   h4{
-    padding-bottom:15px;
+    padding-bottom:20px;
   }
   @media screen and (max-width:1300px) {
     text-align: right;
@@ -33,7 +34,7 @@ display:flex;
     }
   }
   @include device_max-768 {
-    text-align:left;
+    text-align:center;
     h1 {
       font-size:1.8rem;
     }
@@ -45,37 +46,46 @@ display:flex;
 
 //banner廣告區塊
 .banner{
-width:35%;
 position: fixed;
 overflow: hidden;
 right:0;
-  @media screen and (max-width:1300px) {
-    width:50%;
-    right:0;
-  }
-  @include device_max-768 {
-    position: relative;
-    width:100%;
-    right:0px;
-    overflow: visible;
-    #index-banner{
-      width:50%;
-      position:absolute;
-      right:-30px;
-      img{width:100%;}
-    }
-    #index-banner-detail{
-      width:100%;
-      // float: left;
-      position:relative;
-      z-index: 20;
-      text-shadow: 0 0 2px rgba(#000,.5);
-    }
-  }
+transition: all 0.5s ease;
+&.active{
+  opacity: 0.2;
+}
+@include device_max-768 {
+  width:100%;
+}
+  // @media screen and (max-width:1300px) {
+  //   width:50%;
+  //   right:0;
+  // }
+  // @include device_max-768 {
+  //   position: relative;
+  //   width:100%;
+  //   right:0px;
+  //   overflow: visible;
+  //   #index-banner{
+  //     width:50%;
+  //     position:absolute;
+  //     right:-30px;
+  //     img{width:100%;}
+  //   }
+  //   #index-banner-detail{
+  //     width:100%;
+  //     // float: left;
+  //     position:relative;
+  //     z-index: 20;
+  //     text-shadow: 0 0 2px rgba(#000,.5);
+  //   }
+  // }
 }
 //profile作品集區塊
 .profile{
-  width:65%;
+  position: relative;
+  width:100%;
+  padding-top:150px;
+  z-index:20;
   @include device_max-768 {
     width:100%;
   }
@@ -85,25 +95,25 @@ right:0;
   text-align:left;
   padding:0 10px;
   z-index: 20;
-  padding-bottom:150px;
+  // padding-bottom:150px;
   cursor: pointer;
   @media only screen and (max-width:769px) , only screen and (max-device-width:1024px){
     padding-bottom:0;
   }
   li{
-    width:48%;
+    width:31.3%;
     height:auto;
     display: inline-block;
-    margin:1%;
+    margin:0.5% 1%;
     position: relative;
     vertical-align: top;
-    &:nth-child(2n) {
-      top:10vw;
-      vertical-align: top;
-      @media only screen and (max-width:769px) , only screen and (max-device-width:1024px){
-        top:0;
-      }
-    }
+    // &:nth-child(2n) {
+    //   top:30px;
+    //   vertical-align: top;
+    //   @media only screen and (max-width:769px) , only screen and (max-device-width:1024px){
+    //     top:0;
+    //   }
+    // }
     @media screen and (max-width:640px) {
       width:100%;
       &:nth-child(2n) {
@@ -121,15 +131,21 @@ right:0;
       padding-bottom:65%;
       @include size(100%,auto);
     }
+    span{
+      display: block;
+      padding:10px 0;
+      @include pie-clearfix;
+    }
     .title{
-      padding:10px;
-      background:rgba(#000,.5);
       color:#fff;
-      position: absolute;
-      left:10px;
-      top:10px;
+      position: relative;
+      display:block;
       border-radius: 5px;
       z-index: 10;
+      float: left;
+    }
+    .date{
+      float: right;
     }
     img{
       display:block;
@@ -141,6 +157,21 @@ right:0;
       left:0;
       @include size(100%,100%);
     }
+  }
+}
+.more{
+  padding: 10px;
+  border-radius: 25px;
+  margin: 10px auto;
+  display: block;
+  border: 1px solid #67efff;
+  width: 50%;
+  cursor: pointer;
+  transition: all 0.5s ease;
+  &:hover{
+    color: #000;
+    letter-spacing:1.5rem;
+    background-color: #67efff;
   }
 }
 // lightbox style

@@ -3,14 +3,14 @@ div
   el-dialog(:title='dialogTitle', :visible.sync='dialogVisible', width='90%', top='1%')
     component(:is="componentName", ref="dialogComponent")
     span.dialog-footer(slot='footer')
-      el-button(type='primary', @click='dialogVisible = false') OK
+      el-button(type='primary', @click='dialogVisible = false') CANCEL
       el-button(v-if="dialogUrl['activate'] == true" type='success' @click="linkUrl(dialogUrl['linkurl'])") Go To Website
   .index-wrapper
-    .banner
+    .banner(class="animated fadeIn")
       // #index-banner
       //   img(src="@assets/index-banner.png")
       #index-banner-detail
-        h1 Brian Li Design
+        h1 BRIAN LI DESIGN
         h4 I am a 
           b.change-title
           b.splite |
@@ -23,11 +23,15 @@ div
       //   h6(@click='ChangeFliter' :class="{'active':currentTitle === 'Article'}"  data-nav='Article') Article
       h2 {{currentTitle}}
       ul.profile-article
-        li(v-for="item in currentProfile")
+        li(v-for="item in displayProfile")
           a(@click="openDialog(item.name,item.title,item.link)")
-            span.title {{ item.title }}
             img(:src="item.type==='url'? item.img : require(`@assets/${item.img}`)")
             img(:src="item.img" v-if="item.type == 'url'")
+          span
+            b.title {{ item.title }}
+            b.date {{ item.date}}
+      .more(v-if='profileButton' @click='profileMore') MORE
+
 </template>
 <script>
 import $axios from 'axios';
@@ -50,10 +54,11 @@ export default {
       dialogVisible: false,
       dialogTitle: 'default title',
       dialogUrl:{},
+      scroll:true,
     }
   },
   computed:{
-    ...mapGetters(['currentProfile']),
+    ...mapGetters(['currentProfile','displayProfile','profileButton']),
     ...mapState(["currentFliter","currentTitle"]),
   },
   mounted () {
@@ -61,13 +66,20 @@ export default {
       // this.ChangeFliter();
     })
   },
-  created(){
-    this.GetProfile()
+  async created(){
+    await this.GetProfile()
+    await this.displayDistrice();
+    window.addEventListener('scroll', this.handleScroll);
+  },
+  destroyed() {
+    window.removeEventListener('scroll', this.handleScroll);
   },
   methods:{
-     ...mapActions(['GetProfile']),
-    ChangeFliter(e) {
-      this.$store.dispatch('fliterProfile',e);
+     ...mapActions(['GetProfile','profileMore','displayDistrice']),
+    async ChangeFliter(e) {
+      await this.$store.dispatch('fliterProfile',e);
+      debugger;
+      this.displayDistrice();
     },
     openDialog(name,title,link){
       this.dialogVisible = true;
@@ -88,8 +100,54 @@ export default {
           done();
         })
         .catch(_ => {});
-    }
+    },
+    handleScroll() {
+      let obj = document.querySelector('.banner');
+      let {top,bottom} = obj.getBoundingClientRect();
+      let height = document.documentElement.clientHeight;
+      let windowScroll = Math.floor(document.documentElement.scrollTop);
+      if(windowScroll > 0){
+        obj.classList.add('fadeOut');
+      }else{
+        obj.classList.remove('fadeOut')
+      }
+      // if(windowScroll > height-50){
+      //   debugger;
+      //   this.pageNum++;
+      //   this.displayDistrice();
+      // }
+
+      // this.scrolled = window.scrollY > 100;
+    },
+    // profileMore(){
+    //     this.pageNum++;
+    //     this.displayDistrice();
+    // },
+    // displayDistrice: function () {
+    //   let start = this.pageNum * this.contentNum
+    //   let newListData = []
+    //   let dataLen = this.currentProfile.length
+
+    //   // 頁數
+    //   // this.calPageNumb(dataLen)
+    //   this.totalPages = dataLen
+
+    //   if (dataLen > start) {
+    //     dataLen = start
+    //     this.profileButton= true;
+    //   } else {
+    //     dataLen = this.currentProfile.length
+    //     this.profileButton= false;
+    //   }
+
+    //   for (let i = 0; i < dataLen; i++) {
+    //     newListData.push(this.currentProfile[i])
+    //   }
+
+    //   this.displayProfile = newListData
+    // },
   }
+
 }
 </script>
 <style lang="scss" scoped>
