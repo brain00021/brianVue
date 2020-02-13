@@ -14,10 +14,11 @@
         li Demonstrated development experience and mastery of interface design.
         li Cross-browser compatibility experience for all major browser. 
         li Cooperate with back-end developer and UI/UX designer.
-      div(v-for="image in urls")
-        b {{ image.title}}
-        div
-          el-image(:src="image.url")
+      .flex-wrapper
+        div(v-for="image in urls")
+          b {{ image.title}}
+          div
+            el-image(:src="image.url")
 </template>
 
 <script>

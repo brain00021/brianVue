@@ -20,9 +20,6 @@ export default {
   name: 'MonsterSport',
   data(){
     return{
-      article: false,
-      dialogpassword: '',
-      alertmessage: false,
       urls:[
         {
           title:' Monster Mask Festival adverstments RWD visual',

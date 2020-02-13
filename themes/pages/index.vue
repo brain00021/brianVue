@@ -3,13 +3,12 @@ div
   el-dialog(:title='dialogTitle', :visible.sync='dialogVisible', width='90%', top='1%')
     component(:is="componentName", ref="dialogComponent")
     span.dialog-footer(slot='footer')
-      el-button(v-if="dialogUrl['activate'] == true" type='success' style='float:left' @click="linkUrl(dialogUrl['linkurl'])") Website Link
       el-button(type='primary', @click='dialogVisible = false') OK
-      el-button(@click='dialogVisible = false') Cancel
+      el-button(v-if="dialogUrl['activate'] == true" type='success' @click="linkUrl(dialogUrl['linkurl'])") Go To Website
   .index-wrapper
     .banner
-      #index-banner
-        img(src="@assets/index-banner.png")
+      // #index-banner
+      //   img(src="@assets/index-banner.png")
       #index-banner-detail
         h1 Brian Li Design
         h4 I am a 
@@ -17,8 +16,14 @@ div
           b.splite |
         h6 2013 - 2019
     .profile
+      // nav.profile-fliter-nav
+      //   h2 Categories
+      //   h6(@click='ChangeFliter' :class="{'active':currentTitle === 'All Project'}" data-nav='allproject') All Project
+      //   h6(@click='ChangeFliter' :class="{'active':currentTitle === 'Works Project'}" data-nav='worksproject') Works Project
+      //   h6(@click='ChangeFliter' :class="{'active':currentTitle === 'Article'}"  data-nav='Article') Article
+      h2 {{currentTitle}}
       ul.profile-article
-        li(v-for="item in profile")
+        li(v-for="item in currentProfile")
           a(@click="openDialog(item.name,item.title,item.link)")
             span.title {{ item.title }}
             img(:src="item.type==='url'? item.img : require(`@assets/${item.img}`)")
@@ -28,6 +33,7 @@ div
 import $axios from 'axios';
 import {isUndefined} from 'lodash';
 const dataUrl = require('@assets/data/profile.json');
+import { mapState, mapGetters, mapActions } from 'vuex';
 import dialogComponents from '@themes/components/dialog/index';
 
 export default {
@@ -46,21 +52,22 @@ export default {
       dialogUrl:{},
     }
   },
+  computed:{
+    ...mapGetters(['currentProfile']),
+    ...mapState(["currentFliter","currentTitle"]),
+  },
   mounted () {
     this.$nextTick(() => {
-      this.GetProfile()
+      // this.ChangeFliter();
     })
   },
+  created(){
+    this.GetProfile()
+  },
   methods:{
-    GetProfile: function () {
-      try{
-        let res = dataUrl;
-        this.profile = res.events;
-        this.dataSwtich = true;
-      }
-      catch(res) {
-        alert('目前沒有提供任何資料');
-      }
+     ...mapActions(['GetProfile']),
+    ChangeFliter(e) {
+      this.$store.dispatch('fliterProfile',e);
     },
     openDialog(name,title,link){
       this.dialogVisible = true;

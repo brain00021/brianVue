@@ -1,5 +1,5 @@
 /*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
-
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+TC&display=swap');
 // CSS RESET 的 功能
 * {
   box-sizing:border-box;
@@ -11,6 +11,7 @@ html {
 
 body {
   margin: 0;
+  font-family: 'Noto Sans TC', sans-serif;
 }
 
 // HTML5 display definitions

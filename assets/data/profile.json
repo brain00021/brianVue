@@ -14,7 +14,7 @@
     },
     {
       "url" : "events/OCMS/gamebling/index/index-v2-tumb.jpg",
-      "date" : "2018/8",
+      "date" : "2019/8",
       "img" : "events/OCMS/gamebling/index/index-v2-tumb.jpg",
       "title" : "GAMA @ STYLE 02",
       "type": "image",
@@ -57,12 +57,12 @@
       "name": "Alchemycoin"
     },
     {
-      "url" : "https://mir-s3-cdn-cf.behance.net/project_modules/fs/4e432987785435.5dc2b867cf5b8.jpg",
+      "url" : "https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/56eefc87785435.5e3259d778fd9.jpg",
       "date" : "2017/5",
-      "img" : "https://mir-s3-cdn-cf.behance.net/project_modules/fs/4e432987785435.5dc2b867cf5b8.jpg",
-      "title" : " clickNumLottery @ clickNum ",
+      "img" : "https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/56eefc87785435.5e3259d778fd9.jpg",
+      "title" : " ClickNumLottery @ clickNum ",
       "type": "url",
-      "name": "clickNumLottery"
+      "name": "ClickNumLottery"
     },
     {
       "url" : "https://medium.com/@brianli_42376/%E5%A6%96%E6%80%AA%E6%9D%91%E5%A4%A7%E6%A8%82%E9%80%8F-%E8%A3%BD%E4%BD%9C%E6%B5%81%E7%A8%8B-107b3400c3f8#.7usztpm6c",
@@ -92,7 +92,7 @@
       "url" : "events/sport/sport.jpg",
       "date" : "2015/11",
       "img" : "events/sport/sport-tumb.jpg",
-      "title" : "monster Sport Festival",
+      "title" : "  Monster Village @ Sport Festival",
       "type": "image",
       "name": "monstersportvote"
     },
@@ -100,7 +100,7 @@
       "url" : "events/vote/phone.jpg",
       "date" : "2015/9",
       "img" : "events/vote/vote-tumbs.jpg",
-      "title" : "Monster Taiwan Polite Festival adverstments",
+      "title" : " Monster Village @ Taiwan Polite Festival ",
       "type": "image",
       "name": "monsterpolitevote"
     },
@@ -108,57 +108,17 @@
       "url" : "events/mosiamask/all_mask.jpg",
       "date" : "2015/5",
       "img" : "events/mosiamask/index.jpg",
-      "title" : "Monster Mask Festival adverstments",
+      "title" : "  Monster Village @ Monster Mask Festival ",
       "type": "image",
       "name": "monstercustom"
     },
     {
-      "url" : "events/monsia/image4.jpg",
+      "url" : "https://mir-s3-cdn-cf.behance.net/project_modules/disp/ed23df91481243.5e32dab19dfbe.jpg",
       "date" : "2015/4",
-      "img" : "events/monsia/image4.jpg",
-      "title" : "monsia",
-      "type": "image",
-      "name": "Maintain"
-    },
-    {
-      "url" : "events/lala/image6.jpg",
-      "date" : "2014/4",
-      "img" : "events/lala/image6.jpg",
-      "title" : "lala comercial",
-      "type": "image",
-      "name": "Maintain"
-    },
-    {
-      "url" : "events/aika/image2.jpg",
-      "date" : "2013/4",
-      "img" : "events/aika/image2-thumb.jpg",
-      "title" : "aika commercial",
-      "type": "image",
-      "name": "Maintain"
-    },
-    {
-      "url" : "events/angel/image1.jpg",
-      "date" : "2014/5",
-      "img" : "events/angel/image1-thumb.jpg",
-      "title" : "angel office website",
-      "type": "image",
-      "name": "Maintain"
-    },
-    {
-      "url" : "events/gulo/image7.jpg",
-      "date" : "2014/4",
-      "img" : "events/gulo/image7.jpg",
-      "title" : "gulo office website",
-      "type": "image",
-      "name": "Maintain"
-    },
-    {
-      "url" : "events/lala/image5.jpg",
-      "date" : "2014/5",
-      "img" : "events/lala/image5.jpg",
-      "title" : "lala commercial",
-      "type": "image",
-      "name": "Maintain"
+      "img" : "https://mir-s3-cdn-cf.behance.net/project_modules/disp/ed23df91481243.5e32dab19dfbe.jpg",
+      "title" : " Monster Village @ Ghost Festival ",
+      "type": "url",
+      "name": "MonsterSeekingGame"
     }
   ],
   "uxdesign":[

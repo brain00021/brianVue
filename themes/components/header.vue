@@ -1,7 +1,7 @@
 <template lang="pug">
 header
   #nav(:class="{'navOpen':isOpen}")
-    #logo
+    #logo(@click='closeMenu')
       router-link(to='/')
         img(src="@/assets/logo@2x.svg")
     #toggle(@click='switchMenu' :class="{'on':isOpen}")
@@ -25,16 +25,21 @@ header
     #border-circle
       #menu-wrapper
         ul
-          span Profile
-          li(@click="switchMenu")
-            nuxt-link(to='/about' @click.native='closeNav') ABOUT
+          li(@click="closeMenu")
+            nuxt-link( to='/' @click.native='ChangeFliter' data-nav='allproject') All Project
+          li(@click="closeMenu")
+            nuxt-link( to='/' @click.native='ChangeFliter' data-nav='worksproject') Works Project
+          li(@click="closeMenu")
+            nuxt-link( to='/' @click.native='ChangeFliter'  data-nav='Article') Article
+          li
+            nuxt-link(to='/about' @click.native='closeMenu') ABOUT
           span Small Project
-          li(@click="switchMenu")
-            nuxt-link(to='/travel' @click.native='closeNav' ) Kaochung Travel
-          li(@click="switchMenu")
-            nuxt-link(to='/bmi' @click.native='closeNav') BMI
-          li(@click="switchMenu")
-            nuxt-link(to='/aqi' @click.native='closeNav') AQI
+          li
+            nuxt-link(to='/travel' @click.native='closeMenu' ) Kaochung Travel
+          li
+            nuxt-link(to='/bmi' @click.native='closeMenu') BMI
+          li
+            nuxt-link(to='/aqi' @click.native='closeMenu') AQI
 
 </template>
 <script>
@@ -50,9 +55,12 @@ export default {
     ...mapState(['isOpen']),
   },
   methods: {
-    ...mapActions(['switchMenu'],),
+    ...mapActions(['switchMenu','closeMenu']),
     toggle () {
       this.open = !this.open
+    },
+    ChangeFliter(e) {
+      this.$store.dispatch('fliterProfile',e);
     },
     closeNav () {
       this.open = false

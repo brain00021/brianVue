@@ -5,7 +5,7 @@
       h4 My responsibility in the project.
       ul
         li UI/UX Wireframe/MOCKUP.
-        li Layout RWD WEBDESIGN FROM PSD To html.
+        li Layout RWD WEBDESIGN FROM PSD To Html.
       div(v-for="image in urls")
         b {{ image.title}}
         div
