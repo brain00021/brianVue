@@ -3,6 +3,8 @@
 .index-wrapper{
 display:flex;
 flex-direction:column;
+background: linear-gradient(.01deg,transparent 99%,hsla(0,0%,100%,.1));
+background-size: 100vw 20vh;
   @include device_max-768 {
     display:block;
   }
@@ -88,6 +90,7 @@ transition: all 0.5s ease;
   z-index:20;
   @include device_max-768 {
     width:100%;
+    
   }
 }
 .profile-article{
@@ -97,8 +100,11 @@ transition: all 0.5s ease;
   z-index: 20;
   // padding-bottom:150px;
   cursor: pointer;
-  @media only screen and (max-width:769px) , only screen and (max-device-width:1024px){
-    padding-bottom:0;
+  @media only screen and (max-width:769px){
+    // padding-bottom:0;
+    &.extendAtricle {
+      padding-bottom: 100px;
+    }
   }
   li{
     width:31.3%;
@@ -107,6 +113,8 @@ transition: all 0.5s ease;
     margin:0.5% 1%;
     position: relative;
     vertical-align: top;
+    filter:grayscale(100%);
+    transition:all 0.5s ease;
     // &:nth-child(2n) {
     //   top:30px;
     //   vertical-align: top;
@@ -114,14 +122,24 @@ transition: all 0.5s ease;
     //     top:0;
     //   }
     // }
+    &:hover{
+      filter:grayscale(0%);
+    }
+
     @include device_max-768 {
       width:48%;
     }
-    @media screen and (max-width:640px) {
+    @media only screen and (max-width:1024px){
+      &.active{
+        filter:grayscale(0%);
+      }
+    }
+    @media screen and (max-width:767px) {
       width:100%;
       &:nth-child(2n) {
        top:0;
-      }
+      }      
+
     }
     a{
       position: relative;
@@ -165,7 +183,7 @@ transition: all 0.5s ease;
 .more{
   padding: 10px;
   border-radius: 25px;
-  margin: 10px auto;
+  margin: 50px auto 150px;
   display: block;
   border: 1px solid #67efff;
   width: 50%;

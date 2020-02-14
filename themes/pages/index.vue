@@ -16,13 +16,8 @@ div
           b.splite |
         h6 2013 - 2019
     .profile
-      // nav.profile-fliter-nav
-      //   h2 Categories
-      //   h6(@click='ChangeFliter' :class="{'active':currentTitle === 'All Project'}" data-nav='allproject') All Project
-      //   h6(@click='ChangeFliter' :class="{'active':currentTitle === 'Works Project'}" data-nav='worksproject') Works Project
-      //   h6(@click='ChangeFliter' :class="{'active':currentTitle === 'Article'}"  data-nav='Article') Article
       h2 {{currentTitle}}
-      ul.profile-article
+      ul.profile-article(:class="[{'extendAtricle':!profileButton}]")
         li(:class="`delay-${index%6+1}s`" class="animated fadeIn" v-for="(item,index) in displayProfile")
           a(@click="openDialog(item.name,item.title,item.link)")
             img(:src="item.type==='url'? item.img : require(`@assets/${item.img}`)")
@@ -102,15 +97,28 @@ export default {
         .catch(_ => {});
     },
     handleScroll() {
-      let obj = document.querySelector('.banner');
-      let {top,bottom} = obj.getBoundingClientRect();
+      let banner = document.querySelector('.banner');
+      let {top,bottom} = banner.getBoundingClientRect();
+      let profileEl = document.querySelectorAll('.profile li')
+      let profileArray = Array.from(profileEl);
       let height = document.documentElement.clientHeight;
       let windowScroll = Math.floor(document.documentElement.scrollTop);
       if(windowScroll > 0){
-        obj.classList.add('fadeOut');
+        banner.classList.add('fadeOut');
       }else{
-        obj.classList.remove('fadeOut')
+        banner.classList.remove('fadeOut')
       }
+      profileArray.map(function(e){
+        
+       
+        let {top,bottom} = e.getBoundingClientRect();
+        if(top < height/2 && bottom > height/2){
+          e.classList.add('active');
+        }else{
+          e.classList.remove('active')
+        }
+
+      });
       // if(windowScroll > height-50){
       //   debugger;
       //   this.pageNum++;
