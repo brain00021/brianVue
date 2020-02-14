@@ -84,7 +84,7 @@ transition: all 0.5s ease;
 .profile{
   position: relative;
   width:100%;
-  padding-top:150px;
+  padding-top:180px;
   z-index:20;
   @include device_max-768 {
     width:100%;
@@ -114,6 +114,9 @@ transition: all 0.5s ease;
     //     top:0;
     //   }
     // }
+    @include device_max-768 {
+      width:48%;
+    }
     @media screen and (max-width:640px) {
       width:100%;
       &:nth-child(2n) {

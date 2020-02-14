@@ -1,9 +1,9 @@
 <template lang="pug">
-header
+header(:class="{'active':isOpen}")
   #nav(:class="{'navOpen':isOpen}")
     #logo(@click='closeMenu')
-      router-link(to='/')
-        img(src="@/assets/logo@2x.svg")
+      router-link(to='/' @click.native='ChangeFliter' data-nav='allproject')
+        img(src="@/assets/logo@2x.svg" data-nav='allproject')
     #toggle(@click='switchMenu' :class="{'on':isOpen}")
       span
       span

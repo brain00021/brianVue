@@ -29,7 +29,7 @@ body{
     width: 100%;
     height: 5px;
     display: block;
-    background: #fff;
+    background: #67efff;
     margin: 4px auto;
     transition: all 0.3s;
     backface-visibility: hidden;
@@ -45,6 +45,17 @@ body{
   }
 }
 // 主選單
+header{
+  position: fixed;
+  z-index: 50;
+  width:0;
+  transition:all 0.5s ease;
+  &.active{
+    display: flex;
+    width:100%;
+
+  }
+}
 #nav{
   position: fixed;
   width:auto;
@@ -61,7 +72,7 @@ body{
   @include pie-clearfix;
   @include device_max-768 {
     height:50px;
-    background:#fff;
+    background:rgb(0, 0, 0);
     padding:5px;
     left:0;
     right:0;
@@ -184,8 +195,9 @@ body{
 }
 // 選單內容
 #menu{
-  @include size(0%,100%);
-  position: fixed;
+  @include size(0%,auto);
+  min-height: 100vh;
+  // position: absolute;
   top:0;
   left:0;
   z-index: 50;
@@ -226,8 +238,6 @@ body{
     top:50%;
     transform: translateY(-50%);
     @include device_max-768{
-      transform: none;
-      top:30%;
       width: 90%;
     }
     &::after,&::before{

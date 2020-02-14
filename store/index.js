@@ -66,8 +66,9 @@ const mutations =  {
     state.originProfile = status;
   },
   FLITERPROFILE(state,payload){
+    debugger;
     state.currentFliter = (!isUndefined(payload)) ? payload.target.dataset.nav.split(" ").join("").toLowerCase() : 'allproject';
-    state.currentTitle = (!isUndefined(payload)) ? payload.target.textContent : 'All Project' ;
+    state.currentTitle = (!isUndefined(payload)) ? (payload.target.textContent != '')?payload.target.textContent:'All Project' : 'All Project' ;
     state.currentProfile = [];
     if(state.pageNum > 1){
       state.pageNum = 1;
