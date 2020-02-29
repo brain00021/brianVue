@@ -12,6 +12,7 @@ import GamaStyle11 from '@themes/components/dialog/gama11Style';
 import Alchemycoin from '@themes/components/dialog/Alchemycoin';
 import ClickNumLottery from '@themes/components/dialog/clickNumLottery';
 import Maintain from '@themes/components/dialog/maintain';
+import GCMS from '@themes/components/dialog/GCMS';
 export default {
   Lottery,
   monsterpolitevote,
@@ -27,4 +28,5 @@ export default {
   GamaStyle11,
   Alchemycoin,
   Maintain,
+  GCMS
 }

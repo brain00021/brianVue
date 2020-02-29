@@ -1,14 +1,14 @@
 <template lang="pug">
   .header-popup
+    span.redtips(v-show='!article') This project has businees relative, this dialog is only for Customer reviews
     span.redtips(v-show='!article') Password:1234
     div(v-if='!article')
       .passwordfield
-        el-input(v-model='dialogpassword' show-password placeholder='Please Enter Passowrd')
-        el-button(type='primary' @click='check()') Submit
+        el-input(v-model='dialogpassword' @keyup.enter.native="check" show-password placeholder='Please Enter Passowrd')
+        el-button( @click="check") Submit
       el-alert(v-show='alertmessage' title="Please Enter Correct Password" type="error" @close='alertmessage = false')
     .article(v-if='article')
-      h3 2019 Online gambling website.
-      h4 My responsibility in the project.
+      h4 My job:
       ul
         li Layout RWD WEB DESIGN FROM PSD To html.
         li Demonstrated development experience and mastery of interface design.

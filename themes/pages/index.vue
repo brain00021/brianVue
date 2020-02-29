@@ -2,11 +2,15 @@
 div
   el-dialog(:title='dialogTitle', :visible.sync='dialogVisible', width='90%', top='1%')
     component(:is="componentName", ref="dialogComponent")
-    span.dialog-footer(slot='footer')
-      el-button(type='primary', @click='dialogVisible = false') CANCEL
+    .dialog-header(slot='title')
+      h2 {{dialogTitle}}
+      .dialog-header-image(v-if="dialogType !== 'iframe'")
+        el-image(:src="dialogImgRender")
+    .dialog-footer(slot='footer')
+      el-button.dialog-cancel(type='primary', @click='dialogVisible = false') CANCEL
       el-button(v-if="dialogUrl['activate'] == true" type='success' @click="linkUrl(dialogUrl['linkurl'])") Go To Website
   .index-wrapper
-    .banner(class="animated fadeIn")
+    .banner(class="animated fadeIn", :class="[{'fadeOut':dialogVisible}]")
       // #index-banner
       //   img(src="@assets/index-banner.png")
       #index-banner-detail
@@ -15,11 +19,11 @@ div
           b.change-title
           b.splite |
         h6 2013 - 2019
-    .profile
+    .profile(class="animated",:class="[{'fadeOut':dialogVisible}]")
       h2 {{currentTitle}}
       ul.profile-article(:class="[{'extendAtricle':!profileButton}]")
         li(:class="`delay-${index%6+1}s`" class="animated fadeIn" v-for="(item,index) in displayProfile")
-          a(@click="openDialog(item.name,item.title,item.link)")
+          a(@click="openDialog(item.name,item.title,item.link,item.img,item.type)")
             img(:src="item.type==='url'? item.img : require(`@assets/${item.img}`)")
             img(:src="item.img" v-if="item.type == 'url'")
           span
@@ -48,13 +52,23 @@ export default {
       componentName: 'login',
       dialogVisible: false,
       dialogTitle: 'default title',
+      dialogImg:'',
       dialogUrl:{},
+      dialogType:'',
       scroll:true,
     }
   },
   computed:{
     ...mapGetters(['currentProfile','displayProfile','profileButton']),
     ...mapState(["currentFliter","currentTitle"]),
+    dialogImgRender(){
+      let url = this.dialogImg || 'https://';
+      if(url.slice(0,8)=='https://'){
+         return url;
+      }else{
+        return require(`@assets/${url}`);
+      }
+    }
   },
   mounted () {
     this.$nextTick(() => {
@@ -73,13 +87,14 @@ export default {
      ...mapActions(['GetProfile','profileMore','displayDistrice']),
     async ChangeFliter(e) {
       await this.$store.dispatch('fliterProfile',e);
-      debugger;
       this.displayDistrice();
     },
-    openDialog(name,title,link){
+    openDialog(name,title,link,img,type){
       this.dialogVisible = true;
       this.componentName = name;
       this.dialogTitle = title;
+      this.dialogImg = img;
+      this.dialogType = type;
       if(isUndefined(link)){
         this.dialogUrl = { "linkurl":"javascript:void(0)", "activate":false}
       }else{
@@ -126,34 +141,7 @@ export default {
       // }
 
       // this.scrolled = window.scrollY > 100;
-    },
-    // profileMore(){
-    //     this.pageNum++;
-    //     this.displayDistrice();
-    // },
-    // displayDistrice: function () {
-    //   let start = this.pageNum * this.contentNum
-    //   let newListData = []
-    //   let dataLen = this.currentProfile.length
-
-    //   // 頁數
-    //   // this.calPageNumb(dataLen)
-    //   this.totalPages = dataLen
-
-    //   if (dataLen > start) {
-    //     dataLen = start
-    //     this.profileButton= true;
-    //   } else {
-    //     dataLen = this.currentProfile.length
-    //     this.profileButton= false;
-    //   }
-
-    //   for (let i = 0; i < dataLen; i++) {
-    //     newListData.push(this.currentProfile[i])
-    //   }
-
-    //   this.displayProfile = newListData
-    // },
+    }
   }
 
 }

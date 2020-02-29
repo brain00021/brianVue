@@ -1,8 +1,8 @@
 <template lang="pug">
   .header-popup
     .article
-      h3 2015 CLick Num Advertising Website.
-      h4 My responsibility in the project.
+      p 2015 CLick Num Advertising Website. Is Lottery Commercial website to provide gift card.
+      h4 My job:
       ul
         li UI/UX Wireframe/MOCKUP.
         li Layout RWD WEBDESIGN FROM PSD To Html.

@@ -1,5 +1,7 @@
 <template lang="pug">
   .header-popup
+    // span.redtips(v-show='!article') This project has businees relative, this dialog is only for Customer reviews
+    span.redtips(v-show='article') The article needs time to loading
     span(v-show='!loading') Please hold on 5 seconds loading
     iframe#test(
       v-show='loading'

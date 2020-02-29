@@ -1,8 +1,8 @@
 <template lang="pug">
   .header-popup
     .article
-      h3 2018 Online gamebling website.
-      h4 My responsibility in the project.
+      p it's bitcoin marketing platform.
+      h4 My Job:
       ul
         li UI/UX Wireframe/MOCKUP.
         li Layout RWD WEBDESIGN FROM PSD To html.

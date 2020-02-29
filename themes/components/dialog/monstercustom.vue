@@ -1,8 +1,7 @@
 <template lang="pug">
   .header-popup
     .article
-      h3 2015 Monster Taiwan Polite adverstments.
-      h4 My responsibility in the project.
+      h4 My job:
       ul
         li UI/UX Wireframe/MOCKUP.
         li Layout RWD WEBDESIGN FROM PSD To html.

@@ -1,8 +1,8 @@
 <template lang="pug">
   .header-popup
     .article
-      h3 2016 Monster Ghost Festival.
-      h4 My responsibility in the project.
+      p Monster Village app activity for some fun.
+      h4 My job:
       ul
         li UI/UX Wireframe/MOCKUP.
         li Layout RWD WEBDESIGN FROM PSD To html.

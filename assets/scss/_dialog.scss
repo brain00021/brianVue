@@ -1,0 +1,32 @@
+.el-dialog{
+    background:none;
+    box-shadow: none;
+    color:#fff;
+    @media screen  and (max-width:768px){
+        padding-top:50px;
+    }
+    
+    .dialog-header-image{
+        max-width: 600px;
+        margin:auto;
+    }
+    .el-dialog__title{
+        color:#fff;
+    }
+    .dialog-cancel{
+        border: 1px solid #04a6b1;
+        background: none;
+        color: #04a6b1;
+        &:hover{
+            border: 1px solid #04a6b1;
+            background: #04a6b1;
+            color: #fff;           
+        }
+    }
+    .el-dialog__body{
+        color:#fff;
+    }
+}
+.v-modal{
+    background:rgba(0, 0, 0, 0.5);
+}
