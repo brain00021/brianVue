@@ -33,16 +33,8 @@ header(:class="{'active':isOpen}")
             nuxt-link( to='/' @click.native='ChangeFliter'  data-nav='Article') Article
           li
             nuxt-link(to='/about' @click.native='closeMenu') ABOUT
-          li
-            a Small Project
-              ul.menu-sub-wrapper
-                li
-                  nuxt-link(to='/travel' @click.native='closeMenu' ) Kaochung Travel
-                li
-                  nuxt-link(to='/bmi' @click.native='closeMenu') BMI
-                li
-                  nuxt-link(to='/aqi' @click.native='closeMenu') AQI
-
+          li(@click="closeMenu")
+            nuxt-link( to='/' @click.native='ChangeFliter' data-nav='samllproject') Small Project
 </template>
 <script>
 import { mapState, mapGetters, mapActions } from 'vuex';

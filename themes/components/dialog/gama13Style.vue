@@ -27,7 +27,7 @@ export default {
   name: 'Gama13Style',
   data(){
     return{
-      article: false,
+      article: true,
       dialogpassword: '',
       alertmessage: false,
       urls:[

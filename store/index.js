@@ -87,6 +87,13 @@ const mutations =  {
           }
         });
         break;
+      case 'samllproject':
+        state.originProfile.map((data)=>{
+          if(data.type === 'samllproject'){
+            state.currentProfile.push(data);
+          }
+        });
+        break;
       default:
         state.currentProfile = state.originProfile;
     }

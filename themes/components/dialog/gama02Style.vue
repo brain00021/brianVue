@@ -27,7 +27,7 @@ export default {
   name: 'Gama02Style',
   data(){
     return{
-      article: false,
+      article: true,
       dialogpassword: '',
       alertmessage: false,
       urls:[

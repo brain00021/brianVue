@@ -22,13 +22,20 @@ div
     .profile(class="animated",:class="[{'fadeOut':dialogVisible}]")
       h2 {{currentTitle}}
       ul.profile-article(:class="[{'extendAtricle':!profileButton}]")
-        li(:class="`delay-${index%6+1}s`" class="animated fadeIn" v-for="(item,index) in displayProfile")
-          a(@click="openDialog(item.name,item.title,item.link,item.img,item.type)")
-            img(:src="item.type==='url'? item.img : require(`@assets/${item.img}`)")
-            img(:src="item.img" v-if="item.type == 'url'")
-          span
-            b.title {{ item.title }}
-            b.date {{ item.date}}
+        template(v-for="(item,index) in displayProfile")
+          li(v-if="item.type==='samllproject'")
+            a(:href="item.url" target="_blank")
+              img(:src="item.img")
+            span
+              b.title {{ item.title }}
+              b.date {{ item.date}}
+          li(:class="`delay-${index%6+1}s`" class="animated fadeIn" v-else)
+            a(@click="openDialog(item.name,item.title,item.link,item.img,item.type)")
+              img(:src="item.type==='url'? item.img : require(`@assets/${item.img}`)")
+              img(:src="item.img" v-if="item.type == 'url'")
+            span
+              b.title {{ item.title }}
+              b.date {{ item.date}}
       .more(v-if='profileButton' @click='profileMore') MORE
 
 </template>

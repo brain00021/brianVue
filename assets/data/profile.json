@@ -1,6 +1,14 @@
 {
   "events":[
     {
+      "url" : "https://brain00021.github.io/d3-convid19/",
+      "date" : "2020/04",
+      "img" : "https://mir-s3-cdn-cf.behance.net/project_modules/1400_opt_1/ebad6695360863.5e95ceac1fb8e.png",
+      "title" : "COVID-19 CORONAVIRUS TRACKER",
+      "type": "samllproject",
+      "name": "smallproject"
+    },
+    {
       "url" : "https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/dd60be93020391.5e5a1aa0eacd1.jpg",
       "date" : "2018/11",
       "img" : "https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/dd60be93020391.5e5a1aa0eacd1.jpg",
@@ -21,6 +29,14 @@
             }
     },
     {
+      "url" : "https://brain00021.github.io/bmi",
+      "date" : "2019/02",
+      "img" : "https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/73773295360863.5e95ceac1f433.png",
+      "title" : "BMI",
+      "type": "samllproject",
+      "name": "smallproject"
+    },
+    {
       "url" : "events/OCMS/gamebling/index/index-v2-tumb.jpg",
       "date" : "2019/8",
       "img" : "events/OCMS/gamebling/index/index-v2-tumb.jpg",
@@ -31,6 +47,14 @@
         "linkurl":"https://www.virgin88.com/",
         "activate":true
       }
+    },
+    {
+      "url" : "https://brain00021.github.io/travel",
+      "date" : "2019/04",
+      "img" : "https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/be0c3495360863.5e95ceac201a6.png",
+      "title" : "Kaoshung Travel",
+      "type": "samllproject",
+      "name": "smallproject"
     },
     {
       "url" : "events/OCMS/gamebling/index/index-fisher-tumb.jpg",
@@ -55,6 +79,14 @@
         "linkurl":"https://www.tigerii.com/",
         "activate":true
       }
+    },
+    {
+      "url" : "https://brain00021.github.io/aqi",
+      "date" : "2019/01",
+      "img" : "https://mir-s3-cdn-cf.behance.net/project_modules/1400_opt_1/81910695360863.5e95ceac1ee09.png",
+      "title" : "AQI",
+      "type": "samllproject",
+      "name": "smallproject"
     },
     {
       "url" : "events/alchcoin/alchcoin-tumb.jpg",
