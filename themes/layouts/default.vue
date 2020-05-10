@@ -1,6 +1,6 @@
 <template lang="pug">
   #app
-    Header
+    //- Header
     .content-wrapper
       nuxt
       .footer

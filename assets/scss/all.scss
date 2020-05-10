@@ -12,3 +12,8 @@
 .nuxt-progress {
     background:blue;
 }
+.map-wrapper{
+    @include pie-clearfix;
+    overflow: hidden;
+    position: relative;
+}
