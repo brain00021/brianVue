@@ -1,6 +1,14 @@
 {
   "events":[
     {
+      "url" : "https://brain00021.github.io/openmask/",
+      "date" : "2020/04",
+      "img" : "https://mir-s3-cdn-cf.behance.net/project_modules/1400_opt_1/ebad6695360863.5e95ceac1fb8e.png",
+      "title" : "口罩地圖練習",
+      "type": "samllproject",
+      "name": "smallproject"
+    },
+    {
       "url" : "https://brain00021.github.io/d3-convid19/",
       "date" : "2020/04",
       "img" : "https://mir-s3-cdn-cf.behance.net/project_modules/1400_opt_1/ebad6695360863.5e95ceac1fb8e.png",

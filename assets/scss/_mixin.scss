@@ -41,10 +41,7 @@
 }
 
 @media only screen and (max-width:768px),
-only screen and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1),
-only screen and (min-device-width: 1280px) and (max-device-width: 1280px) and (orientation: landscape) and (-webkit-max-device-pixel-ratio: 1.5) and (min-resolution: 192dpi),
-only screen and (min-device-width: 1366px) and (max-device-width: 1366px) and (orientation: landscape) and (-webkit-max-device-pixel-ratio: 2),
-only screen and (min-device-width: 1440px) and (max-device-width: 1440px) and (orientation: landscape) and (-webkit-max-device-pixel-ratio: 1.5) {
+only screen and (min-device-width: 1366px) {
   .web_view {
     display: none;
   }
