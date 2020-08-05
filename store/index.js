@@ -82,7 +82,7 @@ const mutations =  {
         break;
       case 'article':
         state.originProfile.map((data)=>{
-          if(data.type === 'iframe'){
+          if(data.type === 'iframe' || data.type === 'articlelink' ){
             state.currentProfile.push(data);
           }
         });

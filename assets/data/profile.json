@@ -21,7 +21,7 @@
       "date" : "2015/06",
       "img" : "events/monster-village3.gif",
       "title" : " Monster Village @ Slot machine ",
-      "type": "iframe",
+      "type": "articlelink",
       "name": "Slotmachine"
     },
     {
@@ -29,7 +29,7 @@
       "date" : "2015/08",
       "img" : "events/lettory.jpg",
       "title" : " Monster Village@Lettory Game ",
-      "type": "iframe",
+      "type": "articlelink",
       "name": "Lottery"
     },
     {
@@ -135,7 +135,7 @@
       "date" : "2016/4",
       "img" : "events/shopping_1.jpg",
       "title" : "  Monster Village @ E-commerence ",
-      "type": "iframe",
+      "type": "articlelink",
       "name": "Ecommerceshop"
     },
     {

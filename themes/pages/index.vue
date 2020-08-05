@@ -23,9 +23,9 @@ div
       h2 {{currentTitle}}
       ul.profile-article(:class="[{'extendAtricle':!profileButton}]")
         template(v-for="(item,index) in displayProfile")
-          li(v-if="item.type==='samllproject'")
+          li(v-if="item.type==='samllproject' || item.type==='articlelink'")
             a(:href="item.url" target="_blank")
-              img(:src="item.img")
+              img(:src="item.type !=='articlelink'? item.img : require(`@assets/${item.img}`)")
             span
               b.title {{ item.title }}
               b.date {{ item.date}}
