@@ -67,7 +67,7 @@ const mutations =  {
   },
   FLITERPROFILE(state,payload){
     state.currentFliter = (!isUndefined(payload)) ? payload.target.dataset.nav.split(" ").join("").toLowerCase() : 'allproject';
-    state.currentTitle = (!isUndefined(payload)) ? (payload.target.textContent != '')?payload.target.textContent:'All Project' : 'All Project' ;
+    state.currentTitle = (!isUndefined(payload)) ? (payload.target.dataset.nav != '')?payload.target.dataset.nav:'allproject' : 'allproject' ;
     state.currentProfile = [];
     if(state.pageNum > 1){
       state.pageNum = 1;

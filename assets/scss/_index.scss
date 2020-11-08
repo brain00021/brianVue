@@ -51,12 +51,14 @@ background-size: 100vw 20vh;
 position: fixed;
 overflow: hidden;
 right:0;
+top:20px;
 transition: all 0.5s ease;
 &.active{
   opacity: 0.2;
 }
 @include device_max-768 {
   width:100%;
+  top:unset;
 }
   // @media screen and (max-width:1300px) {
   //   width:50%;

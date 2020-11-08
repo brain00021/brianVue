@@ -1,10 +1,18 @@
 {
   "events":[
     {
+      "url" : "https://brain00021.github.io/openmask/",
+      "date" : "2020/04",
+      "img" : "https://mir-s3-cdn-cf.behance.net/project_modules/1400_opt_1/ebad6695360863.5e95ceac1fb8e.png",
+      "title" : "口罩地圖練習",
+      "type": "samllproject",
+      "name": "smallproject"
+    },
+    {
       "url" : "https://brain00021.github.io/d3-convid19/",
       "date" : "2020/04",
       "img" : "https://mir-s3-cdn-cf.behance.net/project_modules/1400_opt_1/ebad6695360863.5e95ceac1fb8e.png",
-      "title" : "CONVID_19_TRACKER",
+      "title" : "COVID-19 CORONAVIRUS TRACKER",
       "type": "samllproject",
       "name": "smallproject"
     },
@@ -12,7 +20,7 @@
       "url" : "https://medium.com/@brianli_42376/%E6%89%80%E4%BB%A5%E6%88%91%E5%80%91%E5%8F%88%E9%96%8B%E5%A7%8B%E8%A8%88%E5%8A%83%E5%8F%A6%E5%A4%96%E4%B8%80%E5%80%8B%E8%B3%AD%E5%8D%9A%E9%81%8A%E6%88%B2%E4%BE%86%E9%81%8A%E6%A8%82%E4%BA%86-429f270d22c4#.ppq0j7jg2",
       "date" : "2015/06",
       "img" : "events/monster-village3.gif",
-      "title" : "Monster_village_Slot_machine",
+      "title" : " Monster Village @ Slot machine ",
       "type": "articlelink",
       "name": "Slotmachine"
     },
@@ -20,7 +28,7 @@
       "url" : "https://medium.com/@brianli_42376/%E5%A6%96%E6%80%AA%E6%9D%91%E5%A4%A7%E6%A8%82%E9%80%8F-%E8%A3%BD%E4%BD%9C%E6%B5%81%E7%A8%8B-107b3400c3f8#.7usztpm6c",
       "date" : "2015/08",
       "img" : "events/lettory.jpg",
-      "title" : "Monster_village_Lottery_game",
+      "title" : " Monster Village@Lettory Game ",
       "type": "articlelink",
       "name": "Lottery"
     },
@@ -28,7 +36,7 @@
       "url" : "https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/dd60be93020391.5e5a1aa0eacd1.jpg",
       "date" : "2018/11",
       "img" : "https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/dd60be93020391.5e5a1aa0eacd1.jpg",
-      "title" : "GAMA_GCMS",
+      "title" : "GAMA @ GCMS",
       "type": "url",
       "name": "GCMS"
     },
@@ -36,7 +44,7 @@
       "url" : "events/OCMS/gamebling/index/index.jpg",
       "date" : "2018/11",
       "img" : "events/OCMS/gamebling/index/index-tumb.jpg",
-      "title" : "GAMA_STYLE_15",
+      "title" : "GAMA @ STYLE 15",
       "type": "image",
       "name": "GamaStyle15",
       "link":{
@@ -56,7 +64,7 @@
       "url" : "events/OCMS/gamebling/index/index-v2-tumb.jpg",
       "date" : "2019/8",
       "img" : "events/OCMS/gamebling/index/index-v2-tumb.jpg",
-      "title" : "GAMA_STYLE_02",
+      "title" : "GAMA @ STYLE 02",
       "type": "image",
       "name": "GamaStyle02",
       "link":{
@@ -64,12 +72,19 @@
         "activate":true
       }
     },
-
+    {
+      "url" : "https://brain00021.github.io/travel",
+      "date" : "2019/04",
+      "img" : "https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/be0c3495360863.5e95ceac201a6.png",
+      "title" : "Kaoshung Travel",
+      "type": "samllproject",
+      "name": "smallproject"
+    },
     {
       "url" : "events/OCMS/gamebling/index/index-fisher-tumb.jpg",
       "date" : "2018/8",
       "img" : "events/OCMS/gamebling/index/index-fisher-tumb.jpg",
-      "title" : "GAMA_STYLE_11",
+      "title" : "GAMA @ STYLE 11",
       "type": "image",
       "name": "GamaStyle11",
       "link":{
@@ -89,7 +104,14 @@
         "activate":true
       }
     },
-
+    {
+      "url" : "https://brain00021.github.io/aqi",
+      "date" : "2019/01",
+      "img" : "https://mir-s3-cdn-cf.behance.net/project_modules/1400_opt_1/81910695360863.5e95ceac1ee09.png",
+      "title" : "AQI",
+      "type": "samllproject",
+      "name": "smallproject"
+    },
     {
       "url" : "events/alchcoin/alchcoin-tumb.jpg",
       "date" : "2017/5",
@@ -147,30 +169,6 @@
       "title" : " Monster Village @ Ghost Festival ",
       "type": "url",
       "name": "MonsterSeekingGame"
-    },
-    {
-      "url" : "https://brain00021.github.io/travel",
-      "date" : "2019/04",
-      "img" : "https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/be0c3495360863.5e95ceac201a6.png",
-      "title" : "Kaoshung Travel",
-      "type": "samllproject",
-      "name": "smallproject"
-    },
-    {
-      "url" : "https://brain00021.github.io/aqi",
-      "date" : "2019/01",
-      "img" : "https://mir-s3-cdn-cf.behance.net/project_modules/1400_opt_1/81910695360863.5e95ceac1ee09.png",
-      "title" : "AQI",
-      "type": "samllproject",
-      "name": "smallproject"
-    },
-    {
-      "url" : "https://brain00021.github.io/openmask/",
-      "date" : "2020/04",
-      "img" : "https://mir-s3-cdn-cf.behance.net/project_modules/1400_opt_1/ebad6695360863.5e95ceac1fb8e.png",
-      "title" : "covid_19_mask_map",
-      "type": "samllproject",
-      "name": "smallproject"
     }
   ],
   "uxdesign":[

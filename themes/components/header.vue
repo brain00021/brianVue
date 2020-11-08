@@ -26,15 +26,15 @@ header(:class="{'active':isOpen}")
       #menu-wrapper
         ul.menu-main-wrapper
           li(@click="closeMenu")
-            nuxt-link( to='/' @click.native='ChangeFliter' data-nav='allproject') All Project
+            nuxt-link( to='/' @click.native='ChangeFliter' data-nav='allproject') {{$t('allproject')}}
           li(@click="closeMenu")
-            nuxt-link( to='/' @click.native='ChangeFliter' data-nav='worksproject') Works Project
+            nuxt-link( to='/' @click.native='ChangeFliter' data-nav='worksproject') {{$t('worksproject')}}
           li(@click="closeMenu")
-            nuxt-link( to='/' @click.native='ChangeFliter'  data-nav='Article') Article
+            nuxt-link( to='/' @click.native='ChangeFliter'  data-nav='Article') {{$t('Article')}}
           li
-            nuxt-link(to='/about' @click.native='closeMenu') ABOUT
+            nuxt-link(to='/about' @click.native='closeMenu' data-nav="aboutUs")  {{$t('aboutUs')}}
           li(@click="closeMenu")
-            nuxt-link( to='/' @click.native='ChangeFliter' data-nav='samllproject') Small Project
+            nuxt-link( to='/' @click.native='ChangeFliter' data-nav='samllproject')  {{$t('samllproject')}}
 </template>
 <script>
 import { mapState, mapGetters, mapActions } from 'vuex';

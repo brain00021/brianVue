@@ -155,9 +155,9 @@ export default {
       this.loading = true;
       const pharmacies = this.data.filter(pharmacy => {
         if (!this.select.area) {
-          return pharmacy.properties.county === this.select.city;
+          return pharmacy?.properties.county === this.select.city;
         }
-        return pharmacy.properties.town === this.select.area;
+        return pharmacy?.properties.town === this.select.area;
       });
 
       pharmacies.forEach(pharmacy => {

@@ -44,7 +44,8 @@ module.exports = {
   ** Plugins to load before mounting the App
   */
   plugins: [
-    '@/plugins/element-ui'
+    '@/plugins/element-ui',
+    '@/plugins/myplugin'
   ],
   /*
   ** Nuxt.js dev-modules
@@ -57,7 +58,26 @@ module.exports = {
   */
   modules: [
     '@nuxtjs/axios',
+    'nuxt-i18n',
   ],
+  // Or with global options
+  i18n: {
+    locales: [ {
+      code: 'en',
+      file: 'en-US.js'
+    },
+    {
+      code: 'es',
+      file: 'es-ES.js'
+    },
+    {
+      code: 'cn',
+      file: 'cn-TW.js'
+    }],
+    lazy: true,
+    langDir: 'lang/',
+    defaultLocale: 'en',
+  },
   dir: {
     assets: `/assets`,
     layouts: `themes/layouts`,
