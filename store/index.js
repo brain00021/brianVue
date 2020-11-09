@@ -15,6 +15,7 @@ const state = () => ({
     currentFliter:'',
     currentTitle:'',
     contentNum: 6,
+    locale: 'en',
     pageNum: 1,
     totalPages: 0,
     displayProfile:[],
@@ -35,6 +36,10 @@ const actions = {
   fliterProfile(context,status){
     context.commit('FLITERPROFILE',status)
     context.commit('DISPLAYPROFILE')
+  },
+  setLang(context,status){
+    context.commit('SETLANG',status)
+    // context.commit('DISPLAYPROFILE')
   },
   // menu開關
   switchMenu({commit}) {
@@ -65,14 +70,22 @@ const mutations =  {
   GETPROFILE(state,status){
     state.originProfile = status;
   },
+  SETLANG(state, payload){
+    state.locale = payload 
+  },
   FLITERPROFILE(state,payload){
+    // if(isUndefined(payload)){ return ;}
+
+    state.locale = state.locale 
     state.currentFliter = (!isUndefined(payload)) ? payload.target.dataset.nav.split(" ").join("").toLowerCase() : 'allproject';
     state.currentTitle = (!isUndefined(payload)) ? (payload.target.dataset.nav != '')?payload.target.dataset.nav:'allproject' : 'allproject' ;
     state.currentProfile = [];
     if(state.pageNum > 1){
       state.pageNum = 1;
     }
+    
     switch(state.currentFliter) {
+     
       case 'worksproject':
         state.originProfile.map((data)=>{
           if(data.type === 'image' || data.type === 'url'){
@@ -131,6 +144,7 @@ const getters = {
   currentProfile: state => state.currentProfile,
   displayProfile: state => state.displayProfile,
   profileButton: state => state.profileButton,
+  getLocale: state => state.locale,
 }
 
 export default {
