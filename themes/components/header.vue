@@ -26,15 +26,15 @@ header(:class="{'active':isOpen}")
       #menu-wrapper
         ul.menu-main-wrapper
           li(@click="closeMenu")
-            nuxt-link( to=`/${getLocale}` @click.native='ChangeFliter' data-nav='allproject') {{$t('allproject')}}
+            nuxt-link( :to="`/${getLocale}`" @click.native='ChangeFliter' data-nav='allproject') {{$t('allproject')}}
           li(@click="closeMenu")
-            nuxt-link( to=`/${getLocale}` @click.native='ChangeFliter' data-nav='worksproject') {{$t('worksproject')}}
+            nuxt-link( :to="`/${getLocale}`" @click.native='ChangeFliter' data-nav='worksproject') {{$t('worksproject')}}
           li(@click="closeMenu")
-            nuxt-link( to=`/${getLocale}` @click.native='ChangeFliter'  data-nav='Article') {{$t('Article')}}
+            nuxt-link( :to="`/${getLocale}`" @click.native='ChangeFliter'  data-nav='Article') {{$t('Article')}}
           li
-            nuxt-link(to=`/${getLocale}/about` @click.native='closeMenu' data-nav="aboutUs")  {{$t('aboutUs')}}
+            nuxt-link(:to="`/${getLocale}/About`" @click.native='closeMenu' data-nav="aboutUs")  {{$t('aboutUs')}}
           li(@click="closeMenu")
-            nuxt-link( to=`/${getLocale}` @click.native='ChangeFliter' data-nav='samllproject')  {{$t('samllproject')}}
+            nuxt-link( :to="`/${getLocale}`" @click.native='ChangeFliter' data-nav='samllproject')  {{$t('samllproject')}}
 </template>
 <script>
 import { mapState, mapGetters, mapActions } from 'vuex';
@@ -57,7 +57,7 @@ export default {
     },
     ChangeFliter(e) {
       this.$store.dispatch('fliterProfile',e);
-      this.$store.dispatch('langSeting');
+      // this.$store.dispatch('langSeting');
     },
     closeNav () {
       this.open = false

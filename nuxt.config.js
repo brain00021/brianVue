@@ -76,7 +76,6 @@ module.exports = {
     }],
     lazy: true,
     langDir: 'lang/',
-    defaultLocale: 'en',
   },
   dir: {
     assets: `/assets`,
