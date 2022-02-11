@@ -24,7 +24,7 @@
     "koa": "^2.6.2",
     "leaflet": "^1.6.0",
     "lodash": "^4.17.15",
-    "node-sass": "^4.14.1",
+    "node-sass": "^7.0.0",
     "nuxt": "^2.12.2",
     "nuxt-i18n": "^6.15.4",
     "sass-resources-loader": "^2.0.3",
